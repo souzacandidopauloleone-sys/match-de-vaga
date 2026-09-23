@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match de Vaga — Compare seu perfil com a vaga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <p class="kicker">MATCH DE VAGA</p>
+            <h1>Seu perfil combina com a vaga?</h1>
+            <p class="sub">Cole o texto do seu LinkedIn e a descrição da vaga. A ferramenta calcula a compatibilidade e
+                mostra exatamente o que ajustar.</p>
+        </header>
+        <div class="field"> <label for="perfil">Seu perfil do LinkedIn</label> <textarea id="perfil"
+                placeholder="Cole aqui headline, sobre e experiência..."></textarea> </div>
+        <div class="field"> <label for="vaga">Descrição da vaga</label> <textarea id="vaga"
+                placeholder="Cole aqui o texto da vaga que você quer disputar..."></textarea> </div> <button
+            onclick="analisar()">Analisar match</button>
+        <section id="resultado">
+            <div class="score-row">
+                <div class="score-ring"> <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="52" fill="none" stroke="#e4ddc8" stroke-width="10" />
+                        <circle id="ringFg" cx="60" cy="60" r="52" fill="none" stroke="var(--gold)" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" />
+                    </svg>
+                    <div class="score-num" id="scoreNum">0%</div>
+                </div>
+                <div class="score-label">
+                    <p class="headline" id="scoreHeadline"></p>
+                    <p class="desc" id="scoreDesc"></p>
+                </div>
+            </div>
+            <div class="kw-cols">
+                <div class="kw-block present">
+                    <h3>NO SEU PERFIL</h3>
+                    <ul class="kw-list" id="kwPresent"></ul>
+                </div>
+                <div class="kw-block missing">
+                    <h3>FALTANDO</h3>
+                    <ul class="kw-list" id="kwMissing"></ul>
+                </div>
+            </div>
+            <div class="suggestions">
+                <h3>SUGESTÕES</h3>
+                <ul id="sugestoes"></ul>
+            </div> <button class="again" onclick="reiniciar()">Analisar outra vaga</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
