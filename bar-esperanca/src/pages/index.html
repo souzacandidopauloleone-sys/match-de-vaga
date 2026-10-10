@@ -52,11 +52,11 @@
 
   <div class="hero__media">
     <figure class="hero__main reveal-load" style="--d:1">
-      <img src="{{img.picanha}}" width="896" height="1120" fetchpriority="high" decoding="async"
-           alt="Picanha fatiada na tábua ao lado de uma travessa de baião de dois com queijo coalho">
-    </figure>
-    <figure class="hero__side reveal-load" style="--d:3">
-      <img src="{{img.chope}}" width="880" height="1168" decoding="async" alt="Dois copos de chope gelado com colarinho cremoso">
+      <video class="hero__video" data-hero-video autoplay muted loop playsinline preload="auto"
+             poster="{{img.picanha}}" width="720" height="960"
+             aria-label="Picanha fatiada na tábua ao lado de uma travessa de baião de dois, com vapor subindo">
+        <source src="{{video.hero}}" type="video/mp4">
+      </video>
     </figure>
   </div>
 </section>

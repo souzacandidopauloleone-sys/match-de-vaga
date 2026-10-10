@@ -27,7 +27,15 @@ const IMG = {
   balcao: CDN + "hf_20261010_132901_b63879fd-46a8-4c8d-925a-fd61951420f1.png",
 };
 
+// Vídeo da abertura (gerado a partir da foto da picanha). O pôster é a própria foto.
+const VIDEO = {
+  hero: CDN + "hf_20261010_140004_96b9ca75-87b9-4468-ba30-70b8c59780fa.mp4",
+};
+
 const read = (p) => readFileSync(join(src, p), "utf8");
+const dataUri = (p, type) => `data:${type};base64,${readFileSync(join(src, p)).toString("base64")}`;
+const LOGO = dataUri("assets/img/logo.png", "image/png");
+const FAVICON = dataUri("assets/img/favicon.png", "image/png");
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 // ---------- Cardápio ----------
@@ -116,8 +124,14 @@ for (const file of pages) {
     wa: WA,
     menu: menu.groups,
     menu_nav: menu.nav,
+    logo: LOGO,
+    favicon: FAVICON,
   };
   html = html
+    .replace(/\{\{video\.(\w+)\}\}/g, (_, k) => {
+      if (!(k in VIDEO)) throw new Error(`Vídeo desconhecido: ${k} em ${file}`);
+      return VIDEO[k];
+    })
     .replace(/\{\{img\.(\w+)\}\}/g, (_, k) => {
       if (!(k in IMG)) throw new Error(`Imagem desconhecida: ${k} em ${file}`);
       return IMG[k];

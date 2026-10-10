@@ -177,6 +177,13 @@
     });
   }
 
+  // Vídeo da abertura: fica parado (mostrando a foto) para quem pede menos movimento.
+  var heroVideo = document.querySelector("[data-hero-video]");
+  if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.removeAttribute("autoplay");
+    heroVideo.pause();
+  }
+
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
 })();
