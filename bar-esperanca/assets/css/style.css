@@ -193,12 +193,12 @@ figure { margin: 0; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
 .hero__media { position: relative; }
-.hero__main { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; box-shadow: var(--shadow); }
+.hero__main { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; box-shadow: var(--shadow); background: var(--surface-2); }
 .hero__main img { width: 100%; height: 100%; object-fit: cover; }
 .hero__side {
   position: absolute; left: -12px; bottom: -28px; width: 38%;
   border-radius: var(--radius); overflow: hidden; aspect-ratio: 3 / 4;
-  border: 6px solid var(--bg); box-shadow: var(--shadow);
+  border: 6px solid var(--bg); box-shadow: var(--shadow); background: var(--surface-2);
 }
 .hero__side img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -250,7 +250,6 @@ figure { margin: 0; }
 }
 .tile:hover img { transform: scale(1.04); }
 .tile__body { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px; color: #f1f2ec; }
-.tile__tag { display: block; font-size: 0.875rem; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
 .tile h3 { font-size: 1.5rem; line-height: 1.1; }
 .tile p { margin-top: 6px; font-size: 0.9375rem; color: rgb(241 242 236 / 0.82); max-width: 38ch; }
 .tile--feature h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
@@ -273,7 +272,7 @@ figure { margin: 0; }
 
 /* ---------- A casa: imagem sangrada + linha do tempo ---------- */
 .story { padding-bottom: 96px; }
-.story__image { height: clamp(280px, 52vw, 620px); overflow: hidden; }
+.story__image { height: clamp(280px, 52vw, 620px); overflow: hidden; background: var(--surface-2); }
 .story__image img { width: 100%; height: 100%; object-fit: cover; }
 .story__inner {
   position: relative; margin-top: -96px;
@@ -315,7 +314,7 @@ figure { margin: 0; }
 .marquee { display: flex; }
 .marquee__track { display: flex; gap: 14px; padding-right: 14px; flex: none; }
 .marquee__track img {
-  height: clamp(220px, 28vw, 340px); width: auto; border-radius: var(--radius); object-fit: cover;
+  height: clamp(220px, 28vw, 340px); width: auto; border-radius: var(--radius); object-fit: cover; background: var(--surface-2);
 }
 @media (prefers-reduced-motion: no-preference) {
   .marquee__track { animation: marquee 60s linear infinite; }
