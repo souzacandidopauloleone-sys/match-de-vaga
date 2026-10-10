@@ -1,0 +1,37 @@
+<!--meta {"title": "Cardápio | Bar e Choperia Esperança", "description": "Cardápio completo do Bar e Choperia Esperança, com preços."} -->
+<header class="page-head wrap">
+  <h1 class="page-head__title reveal-load" style="--d:0">Cardápio</h1>
+  <p class="page-head__lead reveal-load" style="--d:1">{{menu_total}} opções entre entradas, petiscos, pratos, pizzas, sobremesas e bebidas. Preços sujeitos a alteração.</p>
+  <div class="menu-search reveal-load" style="--d:2">
+    <label class="visually-hidden" for="busca-cardapio">Buscar no cardápio</label>
+    <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+    <input id="busca-cardapio" type="search" placeholder="Buscar prato ou bebida" autocomplete="off" data-menu-search>
+  </div>
+</header>
+
+<nav class="cats" aria-label="Categorias do cardápio" data-cats>
+  <div class="wrap cats__track">
+      {{menu_nav}}
+  </div>
+</nav>
+
+<div class="wrap menu-list" data-menu-list>
+    {{menu}}
+  <div class="menu-empty" data-menu-empty hidden>
+    <svg class="i" aria-hidden="true"><use href="#i-fork-knife"/></svg>
+    <p><strong>Nada encontrado.</strong> Tente outro nome, como “picanha” ou “caipirão”, ou fale com a gente pelo WhatsApp.</p>
+  </div>
+</div>
+
+<section class="wrap cta-section" aria-labelledby="pedido-titulo">
+ <div class="cta-panel reveal">
+  <div>
+    <h2 class="cta-panel__title" id="pedido-titulo">Bateu a fome?</h2>
+    <p>Delivery todos os dias, das 11h às 2h.</p>
+  </div>
+  <a class="btn btn--primary" href="{{wa}}" target="_blank" rel="noopener">
+    <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    Pedir no WhatsApp
+  </a>
+ </div>
+</section>

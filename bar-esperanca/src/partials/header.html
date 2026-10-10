@@ -1,0 +1,38 @@
+<header class="nav" data-nav>
+  <div class="nav__inner wrap">
+    <a class="brand" href="index.html">
+      <img class="brand__logo" src="{{logo}}" width="154" height="149" alt="Bar e Choperia Esperança">
+    </a>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a href="index.html" data-nav="inicio">Início</a>
+      <a href="cardapio.html" data-nav="cardapio">Cardápio</a>
+      <a href="a-casa.html" data-nav="a-casa">A casa</a>
+      <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Alternar tema claro e escuro">
+        <svg class="i i--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="i i--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm nav__cta" href="{{wa}}" target="_blank" rel="noopener">
+        <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Pedir no WhatsApp
+      </a>
+      <button class="icon-btn nav__burger" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+        <svg class="i i--open" aria-hidden="true"><use href="#i-list"/></svg>
+        <svg class="i i--close" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="sheet" id="menu-mobile" data-menu hidden>
+    <nav class="wrap sheet__inner" aria-label="Menu mobile">
+      <a href="index.html" data-nav="inicio">Início</a>
+      <a href="cardapio.html" data-nav="cardapio">Cardápio</a>
+      <a href="a-casa.html" data-nav="a-casa">A casa</a>
+      <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+  </div>
+</header>
