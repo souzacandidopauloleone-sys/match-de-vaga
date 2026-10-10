@@ -1,0 +1,110 @@
+<!--meta {"title": "Contato e reservas | Bar e Choperia Esperança", "description": "Endereço, horário, telefone e WhatsApp do Bar e Choperia Esperança, na Rua Esperança, 12, Parque União, Maré. Mande os detalhes da sua mesa pelo WhatsApp.", "nav": "contato", "path": "contato.html"} -->
+<header class="page-head wrap">
+  <h1 class="page-head__title reveal-load" style="--d:0">Contato e reservas</h1>
+  <p class="page-head__lead reveal-load" style="--d:1">Estamos na Rua Esperança, 12, no Parque União. Aberto todos os dias, das 11h às 6h.</p>
+</header>
+
+<section class="visit wrap" aria-labelledby="chegar-titulo">
+  <div class="visit__info">
+    <h2 class="visually-hidden" id="chegar-titulo">Como chegar</h2>
+    <ul class="facts">
+      <li class="reveal">
+        <svg class="i" aria-hidden="true"><use href="#i-map-pin"/></svg>
+        <div>
+          <strong>Rua Esperança, 12</strong>
+          <span>Parque União, Maré, Rio de Janeiro</span>
+        </div>
+      </li>
+      <li class="reveal">
+        <svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>
+        <div>
+          <strong>Todos os dias, das 11h às 6h</strong>
+          <span>De domingo a domingo</span>
+        </div>
+      </li>
+      <li class="reveal">
+        <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+        <div>
+          <strong><a href="tel:+552131046126">(21) 3104-6126</a></strong>
+          <span>WhatsApp <a href="{{wa}}" target="_blank" rel="noopener">(21) 97012-5975</a></span>
+        </div>
+      </li>
+      <li class="reveal">
+        <svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg>
+        <div>
+          <strong><a href="https://www.instagram.com/baresperancaoficial/" target="_blank" rel="noopener">@baresperancaoficial</a></strong>
+          <span>Novidades e fotos da casa</span>
+        </div>
+      </li>
+    </ul>
+    <div class="visit__ctas reveal">
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Bar+e+Choperia+Esperan%C3%A7a+Rua+Esperan%C3%A7a+12+Parque+Uni%C3%A3o+Rio+de+Janeiro" target="_blank" rel="noopener">
+        <svg class="i" aria-hidden="true"><use href="#i-navigation"/></svg>
+        Abrir no mapa
+      </a>
+    </div>
+  </div>
+
+  <div class="visit__map reveal">
+    <iframe title="Mapa com a localização do Bar e Choperia Esperança"
+            src="https://www.google.com/maps?q=Bar+e+Choperia+Esperan%C3%A7a,+Rua+Esperan%C3%A7a+12,+Parque+Uni%C3%A3o,+Rio+de+Janeiro&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="reserve wrap" id="reserva" aria-labelledby="reserva-titulo">
+  <div class="reserve__intro">
+    <h2 class="section-title reveal" id="reserva-titulo">Vai trazer a turma?</h2>
+    <p class="section-lead reveal">Preencha os detalhes e enviamos tudo pronto para o nosso WhatsApp. A confirmação da mesa chega por lá.</p>
+    <figure class="reserve__image reveal">
+      <img src="{{img.chope}}" width="880" height="1168" loading="lazy" decoding="async" alt="Dois copos de chope gelado">
+    </figure>
+  </div>
+
+  <form class="form reveal" data-reserve novalidate>
+    <div class="field">
+      <label for="f-nome">Seu nome</label>
+      <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="f-nome-erro">
+      <p class="field__error" id="f-nome-erro" hidden></p>
+    </div>
+
+    <div class="form__row">
+      <div class="field">
+        <label for="f-data">Data</label>
+        <input id="f-data" name="data" type="date" required aria-describedby="f-data-erro">
+        <p class="field__error" id="f-data-erro" hidden></p>
+      </div>
+      <div class="field">
+        <label for="f-hora">Horário</label>
+        <input id="f-hora" name="hora" type="time" required aria-describedby="f-hora-ajuda f-hora-erro">
+        <p class="field__help" id="f-hora-ajuda">Funcionamos das 11h às 6h.</p>
+        <p class="field__error" id="f-hora-erro" hidden></p>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="f-pessoas">Quantas pessoas</label>
+      <input id="f-pessoas" name="pessoas" type="number" inputmode="numeric" min="1" max="60" required aria-describedby="f-pessoas-erro">
+      <p class="field__error" id="f-pessoas-erro" hidden></p>
+    </div>
+
+    <div class="field">
+      <label for="f-obs">Observações <span class="field__optional">(opcional)</span></label>
+      <textarea id="f-obs" name="obs" rows="3" aria-describedby="f-obs-ajuda"></textarea>
+      <p class="field__help" id="f-obs-ajuda">Aniversário, cadeira para criança, preferência de mesa.</p>
+    </div>
+
+    <button class="btn btn--primary btn--block" type="submit">
+      <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      Enviar pelo WhatsApp
+    </button>
+
+    <div class="form__success" data-reserve-ok role="status" hidden>
+      <svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>
+      <div>
+        <strong>Mensagem pronta.</strong>
+        <p>Abrimos o WhatsApp com os detalhes da sua mesa. Se não abriu, <a href="#" data-reserve-link target="_blank" rel="noopener">toque aqui</a>.</p>
+      </div>
+    </div>
+  </form>
+</section>

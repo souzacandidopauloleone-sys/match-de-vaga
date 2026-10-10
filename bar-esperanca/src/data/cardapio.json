@@ -1,0 +1,43 @@
+{
+  "_leia": "Edite este arquivo para atualizar o cardápio. Use \"preco\": \"R$ 89,90\" para mostrar o preço; deixe null para exibir 'Preço no WhatsApp'. Depois rode: node build.mjs",
+  "categorias": [
+    {
+      "id": "pratos-da-casa",
+      "nome": "Pratos da casa",
+      "texto": "Os pratos que fizeram o nome do Esperança.",
+      "imagem": "picanha",
+      "itens": [
+        { "nome": "Picanha com baião de dois", "descricao": "Picanha na brasa com o baião de dois que virou a marca da casa.", "preco": null, "destaque": true },
+        { "nome": "Tilápia com baião de dois", "descricao": "Filé de tilápia acompanhado do baião de dois.", "preco": null }
+      ]
+    },
+    {
+      "id": "da-brasa",
+      "nome": "Da brasa",
+      "texto": "Churrasco saindo da churrasqueira.",
+      "imagem": "brasa",
+      "itens": [
+        { "nome": "Churrasco", "descricao": "Um dos pedidos mais elogiados pelos clientes.", "preco": null }
+      ]
+    },
+    {
+      "id": "para-a-mesa",
+      "nome": "Para a mesa",
+      "texto": "Para acompanhar o chope com a mesa cheia.",
+      "imagem": "porcoes",
+      "itens": [
+        { "nome": "Porções", "descricao": "Pergunte pelas porções do dia.", "preco": null }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nome": "Chope e drinks",
+      "texto": "Chope gelado e uma carta variada de drinks.",
+      "imagem": "drinks",
+      "itens": [
+        { "nome": "Chope Zero Grau", "descricao": "Tirado na hora, bem gelado.", "preco": null },
+        { "nome": "Drinks", "descricao": "Carta variada de drinks da casa.", "preco": null }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!--meta {"title": "Cardápio | Bar e Choperia Esperança", "description": "Cardápio do Bar e Choperia Esperança: picanha com baião de dois, tilápia, churrasco, porções, chope Zero Grau e drinks. Peça pelo WhatsApp.", "nav": "cardapio", "path": "cardapio.html"} -->
+<header class="page-head wrap">
+  <h1 class="page-head__title reveal-load" style="--d:0">Cardápio</h1>
+  <p class="page-head__lead reveal-load" style="--d:1">Picanha com baião, churrasco, porções e chope gelado. Os preços mudam com frequência, então confirmamos tudo pelo WhatsApp.</p>
+</header>
+
+<nav class="cats" aria-label="Categorias do cardápio" data-cats>
+  <div class="wrap cats__track">
+    {{menu_nav}}
+  </div>
+</nav>
+
+<div class="wrap menu-groups">
+  {{menu}}
+</div>
+
+<section class="wrap cta-section" aria-labelledby="pedido-titulo">
+ <div class="cta-panel reveal">
+  <div>
+    <h2 class="cta-panel__title" id="pedido-titulo">Bateu a fome?</h2>
+    <p>Mande seu pedido e a gente confirma preço e tempo de preparo.</p>
+  </div>
+  <a class="btn btn--primary" href="{{wa}}" target="_blank" rel="noopener">
+    <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    Pedir no WhatsApp
+  </a>
+ </div>
+</section>

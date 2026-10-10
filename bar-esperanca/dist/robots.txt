@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://barechoperiaesperanca.com.br/sitemap.xml

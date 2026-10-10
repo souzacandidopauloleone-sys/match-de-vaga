@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{site}}/{{path}}">
+  <meta name="theme-color" content="#0f1411" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#eef0e9" media="(prefers-color-scheme: light)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bar e Choperia Esperança">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{site}}/{{path}}">
+  <meta property="og:image" content="{{img.ambiente}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Aplica o tema salvo antes da pintura para evitar flash -->
+  <script>
+    try {
+      var t = localStorage.getItem("esperanca-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <!--STYLES-->
+</head>
+<body data-page="{{nav}}">
+{{> sprite}}
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+{{> header}}
+<main id="conteudo">
+{{content}}
+</main>
+{{> footer}}
+<!--SCRIPTS-->
+</body>
+</html>
