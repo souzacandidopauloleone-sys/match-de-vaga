@@ -35,6 +35,24 @@ src/assets/            CSS, JavaScript, fontes (Bricolage Grotesque + Geist, OFL
 dist/                  site pronto (gerado, não editar à mão)
 ```
 
+## Publicar na Vercel
+
+O arquivo `vercel.json` já traz a configuração (montagem com `node build.mjs`, saída em `dist`).
+
+1. Entre em https://vercel.com com sua conta do GitHub.
+2. **Add New → Project** e importe o repositório `match-de-vaga`.
+3. Em **Root Directory**, clique em **Edit** e escolha a pasta `bar-esperanca`.
+4. Clique em **Deploy**.
+
+Depois disso, cada alteração salva na branch `main` atualiza o site no ar sozinha, em cerca de 1 minuto.
+
+## Mudar um preço com o site no ar
+
+1. No GitHub, abra `bar-esperanca/src/data/cardapio.json` e clique no lápis (**Edit this file**).
+2. Use Ctrl+F para achar o prato (ex.: `"Picanha"`) e troque o valor de `"preco"`, mantendo as aspas:
+   `"preco": "R$ 69,90"`. Pratos com tamanhos também têm preços em `"variacoes"`.
+3. Clique em **Commit changes**. A Vercel monta e publica o site de novo automaticamente.
+
 ## Como editar
 
 1. Altere os arquivos em `src/`.
