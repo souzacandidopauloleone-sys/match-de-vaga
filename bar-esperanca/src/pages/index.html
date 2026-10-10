@@ -1,19 +1,20 @@
-<!--meta {"title": "Bar e Choperia Esperança | Picanha com baião na Maré, Rio de Janeiro", "description": "Bar e Choperia Esperança, no Parque União (Maré, RJ). Picanha com baião de dois, churrasco, porções e chope gelado. Aberto todos os dias, das 11h às 6h.", "nav": "inicio", "path": ""} -->
+<!--meta {"title": "Bar e Choperia Esperança | Picanha com baião na Maré, Rio de Janeiro", "description": "Bar e Choperia Esperança, na Praça do Parque União (Maré, RJ). Picanha com baião, tempero nordestino, chope gelado, rooftop e música ao vivo. Aberto todos os dias, das 11h às 6h."} -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BarOrPub",
+  "@type": "Restaurant",
   "name": "Bar e Choperia Esperança",
   "url": "{{site}}/",
-  "image": "{{img.ambiente}}",
+  "image": "{{img.banner}}",
   "telephone": "+55-21-3104-6126",
+  "email": "contato@barechoperiaesperanca.com.br",
   "servesCuisine": ["Brasileira", "Nordestina", "Churrasco"],
   "priceRange": "$$",
   "foundingDate": "1993",
-  "hasMenu": "{{site}}/cardapio.html",
+  "hasMenu": "{{site}}/#cardapio",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Esperança, 12, Parque União",
+    "streetAddress": "Rua Esperança, 12, Praça do Parque União",
     "addressLocality": "Rio de Janeiro",
     "addressRegion": "RJ",
     "addressCountry": "BR"
@@ -37,7 +38,7 @@
   <div class="hero__copy">
     <p class="eyebrow reveal-load" style="--d:0">Parque União, Maré · desde 1993</p>
     <h1 class="hero__title reveal-load" style="--d:1">Picanha com baião, do jeito da <em>Maré</em>.</h1>
-    <p class="hero__sub reveal-load" style="--d:2">Comida farta, preço justo e chope gelado. Aberto todos os dias, das 11h até as 6h da manhã.</p>
+    <p class="hero__sub reveal-load" style="--d:2">Pratos bem servidos com tempero nordestino, preço justo e chope gelado. Todos os dias, das 11h às 6h.</p>
     <div class="hero__ctas reveal-load" style="--d:3">
       <a class="btn btn--primary" href="{{wa}}" target="_blank" rel="noopener">
         <svg class="i" aria-hidden="true"><use href="#i-whatsapp"/></svg>
@@ -83,51 +84,56 @@
   </dl>
 </section>
 
-<!-- DESTAQUES DO CARDÁPIO -->
-<section class="menu wrap" aria-labelledby="destaques-titulo">
-  <h2 class="section-title reveal" id="destaques-titulo">Da brasa direto pra mesa.</h2>
-  <p class="section-lead reveal">Os pratos que fizeram o nome da casa.</p>
+<!-- FAVORITOS -->
+<section class="menu wrap" aria-labelledby="favoritos-titulo">
+  <h2 class="section-title reveal" id="favoritos-titulo">Os favoritos da casa.</h2>
+  <p class="section-lead reveal">Pratos bem servidos e drinks com sotaque nordestino.</p>
 
   <div class="bento">
-    <a class="tile tile--feature reveal" href="cardapio.html#pratos-da-casa">
-      <img src="{{img.picanha}}" width="896" height="1120" loading="lazy" decoding="async" alt="Picanha com baião de dois">
+    <a class="tile tile--feature reveal" href="cardapio.html#menu-refeicoes">
+      <img src="{{img.camarao}}" width="853" height="569" loading="lazy" decoding="async" alt="Camarão Esperança servido com fogo no centro da mesa">
       <div class="tile__body">
-        <h3>Picanha com baião de dois</h3>
-        <p>Picanha na brasa com o baião de dois que virou a marca da casa.</p>
+        <h3>Camarão Esperança</h3>
+        <p>Camarões empanados recheados com cream cheese sobre arroz à piamontese cremoso.</p>
+        <span class="tile__price">A partir de R$ 235,00</span>
       </div>
     </a>
-    <a class="tile reveal" href="cardapio.html#da-brasa">
-      <img src="{{img.brasa}}" width="1168" height="880" loading="lazy" decoding="async" alt="Espetos de churrasco sobre a brasa">
+    <a class="tile reveal" href="cardapio.html#menu-refeicoes">
+      <img src="{{img.picanhaReal}}" width="400" height="267" loading="lazy" decoding="async" alt="Picanha à Esperança na chapa com acompanhamentos">
       <div class="tile__body">
-        <h3>Churrasco na brasa</h3>
-        <p>Um dos pedidos mais elogiados pelos clientes.</p>
+        <h3>Picanha à Esperança</h3>
+        <p>Com batata, aipim, farofa, feijão tropeiro, queijo coalho e baião.</p>
+        <span class="tile__price">A partir de R$ 235,00</span>
       </div>
     </a>
-    <a class="tile reveal" href="cardapio.html#pratos-da-casa">
-      <img src="{{img.tilapia}}" width="1024" height="1024" loading="lazy" decoding="async" alt="Tilápia frita com baião de dois">
+    <a class="tile reveal" href="cardapio.html#menu-entradas">
+      <img src="{{img.coxinha}}" width="560" height="373" loading="lazy" decoding="async" alt="Coxinhas Arretadas douradas">
       <div class="tile__body">
-        <h3>Tilápia com baião</h3>
-        <p>Filé de tilápia acompanhado do baião de dois.</p>
+        <h3>Coxinha Arretada</h3>
+        <p>Massa de abóbora, carne seca e cream cheese.</p>
+        <span class="tile__price">R$ 40,00</span>
       </div>
     </a>
-    <a class="tile reveal" href="cardapio.html#para-a-mesa">
-      <img src="{{img.porcoes}}" width="1168" height="880" loading="lazy" decoding="async" alt="Porções variadas servidas na mesa">
+    <a class="tile reveal" href="cardapio.html#menu-drinks">
+      <img src="{{img.mariaBonita}}" width="683" height="684" loading="lazy" decoding="async" alt="Drink Maria Bonita em taça">
       <div class="tile__body">
-        <h3>Porções</h3>
-        <p>Para acompanhar o chope com a mesa cheia.</p>
+        <h3>Maria Bonita</h3>
+        <p>Gin, tomate cereja, morango, limão, lichia e alecrim.</p>
+        <span class="tile__price">R$ 34,00</span>
       </div>
     </a>
-    <a class="tile reveal" href="cardapio.html#bebidas">
-      <img src="{{img.drinks}}" width="1024" height="1024" loading="lazy" decoding="async" alt="Drinks coloridos no balcão do bar">
+    <a class="tile reveal" href="cardapio.html#menu-drinks">
+      <img src="{{img.caipirao}}" width="683" height="684" loading="lazy" decoding="async" alt="Caipirão na caneca zero grau">
       <div class="tile__body">
-        <h3>Chope e drinks</h3>
-        <p>Chope Zero Grau gelado e uma carta variada de drinks.</p>
+        <h3>Caipirão</h3>
+        <p>Na caneca zero grau: limão, morango, abacaxi, kiwi ou maracujá.</p>
+        <span class="tile__price">A partir de R$ 30,00</span>
       </div>
     </a>
   </div>
 
   <div class="menu__foot reveal">
-    <p>Veja todos os pratos e bebidas da casa.</p>
+    <p>São {{menu_total}} opções entre pratos, petiscos, pizzas e bebidas.</p>
     <a class="btn btn--ghost" href="cardapio.html">
       Ver cardápio
       <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg>
@@ -135,16 +141,35 @@
   </div>
 </section>
 
-<!-- A CASA (resumo) -->
-<section class="story" aria-labelledby="casa-titulo">
+<!-- NOSSA HISTÓRIA -->
+<section class="story" aria-labelledby="historia-home-titulo">
   <figure class="story__image reveal">
-    <img src="{{img.ambiente}}" width="1344" height="752" loading="lazy" decoding="async"
-         alt="Bar movimentado à noite, com mesas na calçada e luzes acesas">
+    <img src="{{img.salao}}" width="1344" height="752" loading="lazy" decoding="async"
+         alt="Salão do restaurante cheio, com famílias e amigos comendo nas mesas">
   </figure>
   <div class="wrap story__inner">
-    <p class="eyebrow reveal">A casa</p>
-    <h2 class="section-title story__title reveal" id="casa-titulo">Nasceu na Maré e virou parada obrigatória no Rio.</h2>
-    <p class="story__text reveal">O que começou em 1993 no Parque União virou ponto de encontro de quem mora na comunidade e de quem atravessa a cidade para provar a picanha com baião.</p>
+    <p class="eyebrow reveal">Nossa história</p>
+    <h2 class="section-title story__title reveal" id="historia-home-titulo">Do Bar do Sorriso ao Esperança.</h2>
+    <p class="story__text reveal">Tudo começou em 1993, num pequeno espaço na Maré chamado Bar do Sorriso, do seu Ednaldo. Anos depois, o genro Rondinele assumiu a casa, mudou o nome para Bar Esperança e, com muito esforço, transformou aquele espaço pequeno no endereço que hoje recebe gente de todos os bairros do Rio.</p>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <span class="timeline__year">1993</span>
+        <p>Nasce o Bar do Sorriso, do seu Ednaldo, na Maré.</p>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__year">2006</span>
+        <p>Rondinele assume e a casa vira oficialmente Bar Esperança.</p>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__year">2018</span>
+        <p>Ampliação com a compra do antigo restaurante Resumo 2 e uma grande reforma.</p>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__year">Hoje</span>
+        <p>Cardápio amplo, rooftop e música ao vivo, das 11h às 6h.</p>
+      </li>
+    </ol>
     <a class="link-arrow reveal" href="a-casa.html">
       Conhecer a casa
       <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg>
@@ -152,21 +177,32 @@
   </div>
 </section>
 
-<!-- DEPOIMENTO -->
-<section class="quote wrap" aria-label="O que dizem os clientes">
-  <blockquote class="reveal">
-    <p>“No Rio, acredito que seja o melhor bar e restaurante que consiga unir preço justo, bom atendimento e pratos variados.”</p>
+<!-- DEPOIMENTOS -->
+<section class="reviews wrap" aria-labelledby="depoimentos-titulo">
+  <h2 class="visually-hidden" id="depoimentos-titulo">Depoimentos</h2>
+  <blockquote class="review review--main reveal">
+    <p>“Excelente lugar para qualquer tipo de ocasião. (...) Atendimento excelente, comida de qualidade e preços acessíveis.”</p>
     <footer>
       <svg class="i quote__stars" aria-hidden="true"><use href="#i-star"/></svg>
-      <span>Avaliação de cliente no Tripadvisor</span>
+      <span><strong>Davidson Souza</strong>, avaliação no Google</span>
     </footer>
   </blockquote>
+  <div class="reviews__side">
+    <blockquote class="review reveal">
+      <p>“Melhor baião de dois que já comi.”</p>
+      <footer><strong>Aldair Fellipe Antunes Motta</strong>, avaliação no Google</footer>
+    </blockquote>
+    <blockquote class="review reveal">
+      <p>“Comida sensacional, sem falar na rapidez que chegam os pratos! E os drinks, meu Deus, perfeitos!”</p>
+      <footer><strong>Leonardo Viana</strong>, avaliação no Google</footer>
+    </blockquote>
+  </div>
 </section>
 
 <!-- GALERIA -->
 <section class="gallery" aria-labelledby="galeria-titulo">
   <div class="wrap gallery__head">
-    <h2 class="section-title reveal" id="galeria-titulo">A noite acontece aqui.</h2>
+    <h2 class="section-title reveal" id="galeria-titulo">Direto do Esperança.</h2>
     <a class="link-arrow reveal" href="https://www.instagram.com/baresperancaoficial/" target="_blank" rel="noopener">
       <svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg>
       @baresperancaoficial
@@ -175,22 +211,23 @@
   </div>
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <img src="{{img.balcao}}" width="880" height="1168" loading="lazy" alt="">
-      <img src="{{img.brasa}}" width="1168" height="880" loading="lazy" alt="">
-      <img src="{{img.chope}}" width="880" height="1168" loading="lazy" alt="">
-      <img src="{{img.porcoes}}" width="1168" height="880" loading="lazy" alt="">
-      <img src="{{img.drinks}}" width="1024" height="1024" loading="lazy" alt="">
-      <img src="{{img.tilapia}}" width="1024" height="1024" loading="lazy" alt="">
+      <img src="{{img.camarao}}" width="853" height="569" loading="lazy" alt="">
+      <img src="{{img.lampiao}}" width="560" height="560" loading="lazy" alt="">
+      <img src="{{img.banner}}" width="845" height="400" loading="lazy" alt="">
+      <img src="{{img.coxinha}}" width="560" height="373" loading="lazy" alt="">
+      <img src="{{img.mariaBonita}}" width="683" height="684" loading="lazy" alt="">
+      <img src="{{img.picanhaReal}}" width="400" height="267" loading="lazy" alt="">
+      <img src="{{img.caipirao}}" width="683" height="684" loading="lazy" alt="">
     </div>
   </div>
 </section>
 
 <!-- VISITE -->
-<section class="band wrap" aria-labelledby="visite-titulo">
+<section class="band wrap" aria-labelledby="visite-home-titulo">
   <div class="band__inner reveal">
     <div>
-      <h2 class="band__title" id="visite-titulo">Rua Esperança, 12. Parque União, Maré.</h2>
-      <p class="band__text">Todos os dias, das 11h às 6h.</p>
+      <h2 class="band__title" id="visite-home-titulo">Rua Esperança, 12. Praça do Parque União, Maré.</h2>
+      <p class="band__text">Restaurante das 11h às 6h. Delivery das 11h às 2h.</p>
     </div>
     <a class="btn btn--ghost" href="contato.html">
       <svg class="i" aria-hidden="true"><use href="#i-navigation"/></svg>

@@ -1,43 +1,3591 @@
 {
-  "_leia": "Edite este arquivo para atualizar o cardápio. Use \"preco\": \"R$ 89,90\" para mostrar o preço; deixe null para exibir 'Preço no WhatsApp'. Depois rode: node build.mjs",
-  "categorias": [
+ "_leia": "Cardápio oficial (fonte: digitalmenuart.com.br/esperanca). Para alterar, edite este arquivo e rode: node build.mjs. \"preco\": texto exibido; \"variacoes\": opções com preço; \"foto\": endereço da imagem.",
+ "fonte": "https://digitalmenuart.com.br/esperanca/menu?lang=pt-BR",
+ "categorias": [
+  {
+   "id": "menu-entradas",
+   "nome": "Entradas",
+   "texto": "O começo perfeito para a sua refeição",
+   "itens": [
     {
-      "id": "pratos-da-casa",
-      "nome": "Pratos da casa",
-      "texto": "Os pratos que fizeram o nome do Esperança.",
-      "imagem": "picanha",
-      "itens": [
-        { "nome": "Picanha com baião de dois", "descricao": "Picanha na brasa com o baião de dois que virou a marca da casa.", "preco": null, "destaque": true },
-        { "nome": "Tilápia com baião de dois", "descricao": "Filé de tilápia acompanhado do baião de dois.", "preco": null }
-      ]
+     "nome": "Bolinho de Bacalhau",
+     "descricao": "Saboreie a tradição com nosso bolinho de bacalhau",
+     "preco": "A partir de R$ 60,00",
+     "variacoes": [
+      {
+       "nome": "7 unidades",
+       "preco": "R$ 60,00"
+      },
+      {
+       "nome": "12 unidades",
+       "preco": "R$ 78,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bolinho-de-bacalhau.jpg"
     },
     {
-      "id": "da-brasa",
-      "nome": "Da brasa",
-      "texto": "Churrasco saindo da churrasqueira.",
-      "imagem": "brasa",
-      "itens": [
-        { "nome": "Churrasco", "descricao": "Um dos pedidos mais elogiados pelos clientes.", "preco": null }
-      ]
+     "nome": "Bolinho de Camarão c/Cream Cheese",
+     "descricao": "Surpreenda-se com essa delícia",
+     "preco": "A partir de R$ 72,90",
+     "variacoes": [
+      {
+       "nome": "6 unidades",
+       "preco": "R$ 72,90"
+      },
+      {
+       "nome": "10 unidades",
+       "preco": "R$ 97,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bolinho-de-camar-ao-c-cream-cheese.jpg"
     },
     {
-      "id": "para-a-mesa",
-      "nome": "Para a mesa",
-      "texto": "Para acompanhar o chope com a mesa cheia.",
-      "imagem": "porcoes",
-      "itens": [
-        { "nome": "Porções", "descricao": "Pergunte pelas porções do dia.", "preco": null }
-      ]
+     "nome": "Mix Bolinhos",
+     "descricao": "12 unidades",
+     "preco": "R$ 55,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-bolinhos.jpg"
     },
     {
-      "id": "bebidas",
-      "nome": "Chope e drinks",
-      "texto": "Chope gelado e uma carta variada de drinks.",
-      "imagem": "drinks",
-      "itens": [
-        { "nome": "Chope Zero Grau", "descricao": "Tirado na hora, bem gelado.", "preco": null },
-        { "nome": "Drinks", "descricao": "Carta variada de drinks da casa.", "preco": null }
-      ]
+     "nome": "Bolinho de Costela Bovina",
+     "descricao": "O irresistível gosto da costela",
+     "preco": "A partir de R$ 44,00",
+     "variacoes": [
+      {
+       "nome": "7 unidades",
+       "preco": "R$ 44,00"
+      },
+      {
+       "nome": "12 unidades",
+       "preco": "R$ 55,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bolinho-de-costela-bovina.jpg"
+    },
+    {
+     "nome": "Bolinho de Carne Seca c/Aipim e Catupiry",
+     "descricao": "Um toque de sertão em cada bolinho",
+     "preco": "A partir de R$ 33,90",
+     "variacoes": [
+      {
+       "nome": "7 unidades",
+       "preco": "R$ 33,90"
+      },
+      {
+       "nome": "12 unidades",
+       "preco": "R$ 44,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bolinho-de-carne-seca-c-aipim-e-catupiry.jpg"
+    },
+    {
+     "nome": "Dadinhos de Tapioca c/Geleia de Pimenta",
+     "descricao": "Dadinhos irresistíveis com um toque apimentado",
+     "preco": "A partir de R$ 33,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 33,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 44,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/dadinhos-de-tapioca-c-geleia-de-pimenta.jpg"
+    },
+    {
+     "nome": "Coxinha Arretada",
+     "descricao": "6 unidades. Feita com uma deliciosa massa de abóbora e recheada com muita carne seca e cream cheese. Uma versão nordestina, cheia de personalidade e atrevimento de um dos salgados mais amados dos cariocas",
+     "preco": "R$ 40,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coxinha-arretada.jpg"
+    },
+    {
+     "nome": "Pastéis de Queijo",
+     "descricao": "6 Unidades",
+     "preco": "R$ 34,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/past-eis-de-queijo.jpg"
+    },
+    {
+     "nome": "Pastéis de Carne",
+     "descricao": "6 unidades",
+     "preco": "R$ 34,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/past-eis-de-queijo.jpg"
+    },
+    {
+     "nome": "Pastéis de Carne Seca",
+     "descricao": "6 unidades",
+     "preco": "R$ 38,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/past-eis-de-queijo.jpg"
+    },
+    {
+     "nome": "Pastéis de Camarão c/Catupiry",
+     "descricao": "6 unidades",
+     "preco": "R$ 42,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/past-eis-de-queijo.jpg"
+    },
+    {
+     "nome": "Caldo de Mocotó",
+     "descricao": "O clássico que nunca sai de moda - Caldo de mocotó como você gosta",
+     "preco": "A partir de R$ 21,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 25,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caldo-de-mocot-o.jpg"
+    },
+    {
+     "nome": "Caldo de Carne",
+     "descricao": "Conforto e sabor em uma só tigela",
+     "preco": "A partir de R$ 21,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 25,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caldo-de-carne.jpg"
+    },
+    {
+     "nome": "Caldo Verde",
+     "descricao": "Descubra o verdadeiro sabor do caldo verde",
+     "preco": "A partir de R$ 21,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 25,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caldo-verde.jpg"
+    },
+    {
+     "nome": "Feijão Amigo",
+     "descricao": "Amigo de todas as horas - Feijão amigo: o sabor caseiro que nunca falha",
+     "preco": "A partir de R$ 21,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 25,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/feij-ao-amigo.jpg"
+    },
+    {
+     "nome": "Pão de Alho",
+     "descricao": "5 unidades",
+     "preco": "R$ 39,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/p-ao-de-alho.jpg"
+    },
+    {
+     "nome": "Pão de Alho c/Linguiça e Queijo",
+     "descricao": "2 unidades",
+     "preco": "R$ 45,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/p-ao-de-alho-c-linguica-e-queijo.jpg"
+    },
+    {
+     "nome": "Pão de Alho c/Coração e Queijo",
+     "descricao": "2 unidades",
+     "preco": "R$ 49,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/p-ao-de-alho-c-linguica-e-queijo.jpg"
+    },
+    {
+     "nome": "Pão de Alho c/Picanha e Queijo",
+     "descricao": "2 unidades",
+     "preco": "R$ 67,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/p-ao-de-alho-c-linguica-e-queijo.jpg"
+    },
+    {
+     "nome": "Pão de Alho Combinado",
+     "descricao": "3 unidades. Com linguiça, coração e picanha",
+     "preco": "R$ 69,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/p-ao-de-alho-c-linguica-e-queijo.jpg"
+    },
+    {
+     "nome": "Mini Escondidinho de Carne Seca",
+     "descricao": "",
+     "preco": "R$ 42,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-carne-seca.jpg"
+    },
+    {
+     "nome": "Mini Escondidinho de Carne de Sol",
+     "descricao": "",
+     "preco": "R$ 42,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-carne-seca.jpg"
+    },
+    {
+     "nome": "Mini Escondidinho de Camarão",
+     "descricao": "",
+     "preco": "R$ 48,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-camar-ao.jpg"
     }
-  ]
+   ]
+  },
+  {
+   "id": "menu-petiscos",
+   "nome": "Petiscos",
+   "texto": "Sabores variados para todos os gostos",
+   "itens": [
+    {
+     "nome": "Gurjão de Frango",
+     "descricao": "Acompanhado de molho rosé",
+     "preco": "A partir de R$ 47,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 47,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 63,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/gurj-ao-de-frango.jpg"
+    },
+    {
+     "nome": "Gurjão de Peixe",
+     "descricao": "Acompanhado de molho tártaro",
+     "preco": "A partir de R$ 47,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 47,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/gurj-ao-de-peixe.jpg"
+    },
+    {
+     "nome": "Mix Esperança",
+     "descricao": "Tiras de frango, tiras de contra filé, linguiça calabresa, aipim e farofa",
+     "preco": "R$ 77,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Cará c/Salada",
+     "descricao": "",
+     "preco": "R$ 67,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Picanha Aperitivo",
+     "descricao": "",
+     "preco": "A partir de R$ 154,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 154,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 194,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-aperitivo.jpg"
+    },
+    {
+     "nome": "Picanha Aperitivo à Esperança",
+     "descricao": "",
+     "preco": "A partir de R$ 174,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 174,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 204,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Contra Filé Aperitivo",
+     "descricao": "",
+     "preco": "A partir de R$ 65,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 65,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 81,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e-aperitivo.jpg"
+    },
+    {
+     "nome": "Contra Filé Aperitivo à Esperança",
+     "descricao": "",
+     "preco": "A partir de R$ 94,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 94,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 106,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Filé Mignon Aperitivo",
+     "descricao": "",
+     "preco": "A partir de R$ 101,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 101,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 129,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon-aperitivo.jpg"
+    },
+    {
+     "nome": "Filé Mignon Aperitivo à Esperança",
+     "descricao": "",
+     "preco": "A partir de R$ 131,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 131,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 162,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Filé de Frango Aperitivo",
+     "descricao": "",
+     "preco": "A partir de R$ 35,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 35,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 46,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-frango-aperitivo.jpg"
+    },
+    {
+     "nome": "Frango à Passarinho",
+     "descricao": "",
+     "preco": "A partir de R$ 41,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 41,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 57,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frango-a-passarinho.jpg"
+    },
+    {
+     "nome": "Coração de Frango",
+     "descricao": "Acompanhados de fatias de pão",
+     "preco": "A partir de R$ 43,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 43,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 57,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/corac-ao-de-frango.jpg"
+    },
+    {
+     "nome": "Carne de Sol c/Aipim",
+     "descricao": "",
+     "preco": "A partir de R$ 62,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 62,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 72,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-de-sol-c-aipim.jpg"
+    },
+    {
+     "nome": "Carne Seca c/Aipim",
+     "descricao": "",
+     "preco": "A partir de R$ 62,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 62,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 72,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-seca-c-aipim.jpg"
+    },
+    {
+     "nome": "Aipim Frito",
+     "descricao": "",
+     "preco": "A partir de R$ 24,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 29,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/aipim-frito.jpg"
+    },
+    {
+     "nome": "Aipim Frito c/Linguiça Picada",
+     "descricao": "",
+     "preco": "A partir de R$ 27,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 27,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 31,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Batata Frita",
+     "descricao": "",
+     "preco": "A partir de R$ 24,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 29,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/batata-frita.jpg"
+    },
+    {
+     "nome": "Batata Frita c/Cheddar e Farofa de Bacon",
+     "descricao": "",
+     "preco": "A partir de R$ 32,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 32,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 37,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/batata-frita-c-cheddar-e-farofa-de-bacon.jpg"
+    },
+    {
+     "nome": "Batata Portuguesa",
+     "descricao": "",
+     "preco": "A partir de R$ 29,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 29,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 34,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/batata-portuguesa.jpg"
+    },
+    {
+     "nome": "Linguiça Calabresa",
+     "descricao": "",
+     "preco": "A partir de R$ 24,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 31,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguica-calabresa.jpg"
+    },
+    {
+     "nome": "Camarão à Paulista",
+     "descricao": "",
+     "preco": "A partir de R$ 67,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 67,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 82,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/camar-ao-a-paulista.jpg"
+    },
+    {
+     "nome": "Azeitonas c/Caroço",
+     "descricao": "",
+     "preco": "A partir de R$ 19,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 19,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 24,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/azeitonas-c-caroco.jpg"
+    },
+    {
+     "nome": "Salaminho",
+     "descricao": "",
+     "preco": "A partir de R$ 31,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 31,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 41,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salaminho.jpg"
+    },
+    {
+     "nome": "Costelinha Aperitivo c/Molho Barbecuee",
+     "descricao": "",
+     "preco": "A partir de R$ 33,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 33,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 44,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Queijo Coalho",
+     "descricao": "",
+     "preco": "A partir de R$ 42,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 42,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 53,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/queijo-coalho.jpg"
+    },
+    {
+     "nome": "Torresmo",
+     "descricao": "",
+     "preco": "A partir de R$ 21,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 25,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/torresmo.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-individuais",
+   "nome": "Individuais",
+   "texto": "Uma refeição completa, feita sob medida",
+   "itens": [
+    {
+     "nome": "Picanha",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 64,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha.jpg"
+    },
+    {
+     "nome": "Contra Filé",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 45,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e.jpg"
+    },
+    {
+     "nome": "Chorizo",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 53,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chorizo.jpg"
+    },
+    {
+     "nome": "Filé Mignon",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 47,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon.png"
+    },
+    {
+     "nome": "Filé Mignon à Parmegiana",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 53,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon-a-parmegiana.jpg"
+    },
+    {
+     "nome": "Churrasco Misto",
+     "descricao": "Carne, frango e linguiça. Acompanha batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/churrasco-misto.jpg"
+    },
+    {
+     "nome": "Filé de Frango",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 35,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-frango.jpg"
+    },
+    {
+     "nome": "Filé de Frango à Parmegiana",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 42,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-frango-a-parmegiana.jpg"
+    },
+    {
+     "nome": "Risoto de Frango",
+     "descricao": "",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/risoto-de-frango.jpg"
+    },
+    {
+     "nome": "Carne de Sol",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 43,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-de-sol.jpg"
+    },
+    {
+     "nome": "Carré Suíno",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 35,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carr-e-su-ino.jpg"
+    },
+    {
+     "nome": "Picanha Suína",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 42,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-su-ina.jpg"
+    },
+    {
+     "nome": "Salmão",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 54,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salm-ao.jpg"
+    },
+    {
+     "nome": "Linguado",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 54,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguado.jpg"
+    },
+    {
+     "nome": "Cará",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 42,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/car-a.jpg"
+    },
+    {
+     "nome": "Filé de Peixe",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguado.jpg"
+    },
+    {
+     "nome": "Filé de Peixe c/Molho de Camarão",
+     "descricao": "Acompanhado de batata ou salada ou farofa de ovo, feijão, ovo frito e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 43,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-peixe-c-molho-de-camar-ao.jpg"
+    },
+    {
+     "nome": "Risoto de Camarão",
+     "descricao": "",
+     "preco": "R$ 46,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/risoto-de-frango.jpg"
+    },
+    {
+     "nome": "Bacalhau Gomes de Sá",
+     "descricao": "Acompanhado de batata corada, ovo cozido, azeitona e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 103,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bacalhau-gomes-de-s-a.jpg"
+    },
+    {
+     "nome": "Bacalhau Zé do Pipo",
+     "descricao": "Lascas de bacalhau gratinado no purê, catupiry e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 103,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bacalhau-z-e-do-pipo.jpg"
+    },
+    {
+     "nome": "Segunda",
+     "descricao": "Rabada com agrião ensopado",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Terça",
+     "descricao": "Costela bovina ensopada",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Quarta",
+     "descricao": "Carne seca com abóbora",
+     "preco": "R$ 41,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Quinta",
+     "descricao": "Carne assada",
+     "preco": "R$ 39,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Sexta",
+     "descricao": "Coxa de frango desossada com purê",
+     "preco": "R$ 36,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-refeicoes",
+   "nome": "Refeições",
+   "texto": "Deliciosas refeições para compartilhar bons momentos",
+   "itens": [
+    {
+     "nome": "Frango Grelhado",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 86,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 86,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 113,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frango-grelhado.jpg"
+    },
+    {
+     "nome": "Frango à Parmegiana",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 112,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 112,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 136,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frango-a-parmegiana.jpg"
+    },
+    {
+     "nome": "Risoto de Frango",
+     "descricao": "",
+     "preco": "A partir de R$ 70,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 70,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 98,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/risoto-de-frango.jpg"
+    },
+    {
+     "nome": "Strogonoff de Frango",
+     "descricao": "Acompanhado de arroz branco e batata palha ou fritas",
+     "preco": "A partir de R$ 86,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 86,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 114,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/strogonoff-de-frango.jpg"
+    },
+    {
+     "nome": "Carré Suíno",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 89,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 89,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 114,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carr-e-su-ino.jpg"
+    },
+    {
+     "nome": "Picanha Suína",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 97,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 97,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 136,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-su-ina.jpg"
+    },
+    {
+     "nome": "Costelinha Suína à Mineira",
+     "descricao": "Acompanhado de tutu, couve, molho barbecue e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 97,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 97,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 136,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/costelinha-su-ina-a-mineira.jpg"
+    },
+    {
+     "nome": "Costelinha c/Molho Barbecue",
+     "descricao": "Batata frita, molho barbecue e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 125,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/costelinha-c-molho-barbecue.jpg"
+    },
+    {
+     "nome": "Picanha",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 213,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 213,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 290,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-2.jpg"
+    },
+    {
+     "nome": "Picanha à Francesa",
+     "descricao": "Acompanhado de guarnição à francesa, batata, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 224,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 224,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 301,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-2.jpg"
+    },
+    {
+     "nome": "Picanha à Esperança",
+     "descricao": "Acompanhado de batata, aipim, farofa de ovos, feijão tropeiro, feijão, queijo coalho e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 235,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 235,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 323,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-a-esperanca.jpg"
+    },
+    {
+     "nome": "Picanha Esperança à Francesa",
+     "descricao": "Acompanhado de guarnição à francesa, batata, aipim, farofa de ovos, feijão tropeiro, feijão, queijo coalho e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 241,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 241,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 334,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-2.jpg"
+    },
+    {
+     "nome": "Contra Filé",
+     "descricao": "Acompanhado de batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 114,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 114,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 171,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e.jpg"
+    },
+    {
+     "nome": "Contra Filé à Francesa",
+     "descricao": "Acompanhado de guarnição à francesa, batata ou salada, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 130,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 130,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 184,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e-a-francesa.jpg"
+    },
+    {
+     "nome": "Carne de Sol",
+     "descricao": "Acompanhado de batata ou aipim, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 108,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 108,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 148,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-de-sol-c-aipim.jpg"
+    },
+    {
+     "nome": "Carne de Sol Esperança",
+     "descricao": "Acompanhado de batata e aipim, linguiça toscana, feijão tropeiro, feijão, queijo coalho, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 142,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 142,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 214,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Chorizo",
+     "descricao": "Contra filé especial, acompanhado de batata, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 156,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 156,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 203,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chorizo.jpg"
+    },
+    {
+     "nome": "Chorizo Esperança",
+     "descricao": "Acompanhado de batata, aipim, feijão tropeiro, feijão, queijo coalho, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 197,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 197,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 258,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Churrasco Misto",
+     "descricao": "Contra filé, filé de frango, carré e linguiça acompanhados de batata, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 137,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 137,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 203,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/churrasco-misto-2.jpg"
+    },
+    {
+     "nome": "Churrasco Misto à Francesa",
+     "descricao": "Contra filé, filé de frango, carré e linguiça acompanhados de guarnição à francesa, batata, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 153,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 153,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 208,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/churrasco-misto-2.jpg"
+    },
+    {
+     "nome": "Mistão Esperança",
+     "descricao": "2 fatias de picanha, 2 fatias de contra filé, 2 fatias de picanha suína, 2 fatias de frango, 2 linguiças, batata, aipim, farofa de ovo, feijão tropeiro, feijão, queijo coalho e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "R$ 291,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Filé Mignon",
+     "descricao": "Acompanhado de batata, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 169,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 169,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 214,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon.png"
+    },
+    {
+     "nome": "Filé Mignon à Parmegiana",
+     "descricao": "Acompanhado de batata, feijão, farofa de ovos e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 179,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 179,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 234,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon-a-parmegiana-2.jpg"
+    },
+    {
+     "nome": "Risoto de Carne Seca",
+     "descricao": "",
+     "preco": "A partir de R$ 109,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 109,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 148,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/risoto-de-frango.jpg"
+    },
+    {
+     "nome": "Strofonoff de Filé Mignon",
+     "descricao": "Acompanhado de arroz branco e batata palha ou fritas",
+     "preco": "A partir de R$ 179,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 179,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 234,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/strofonoff-de-fil-e-mignon.jpg"
+    },
+    {
+     "nome": "Escondidinho de Carne Seca",
+     "descricao": "Gratinado com parmesão e acompanhado de arroz branco",
+     "preco": "A partir de R$ 125,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 125,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 181,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-carne-seca.jpg"
+    },
+    {
+     "nome": "Escondidinho de Carne de Sol",
+     "descricao": "Gratinado com parmesão e acompanhado de arroz branco",
+     "preco": "A partir de R$ 125,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 125,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 181,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-carne-seca.jpg"
+    },
+    {
+     "nome": "Cará",
+     "descricao": "Acompanhado de batata ou salada, farofa de ovos, feijão e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 93,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 93,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 125,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/car-a-2.jpg"
+    },
+    {
+     "nome": "Filé de Peixe",
+     "descricao": "Acompanhado de batata ou salada, farofa de ovos, feijão e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 93,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 93,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 125,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguado.jpg"
+    },
+    {
+     "nome": "Filé de Peixe c/Molho de Camarão",
+     "descricao": "Acompanhado de batata ou salada, farofa de ovos, feijão e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 98,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 98,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 132,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-peixe-c-molho-de-camar-ao.jpg"
+    },
+    {
+     "nome": "Linguado",
+     "descricao": "Acompanhado de batata ou salada, farofa de ovos, feijão e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 137,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 137,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 181,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguado.jpg"
+    },
+    {
+     "nome": "Salmão",
+     "descricao": "Acompanhado de batata ou salada, farofa de ovos, feijão e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 148,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 148,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 192,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salm-ao.jpg"
+    },
+    {
+     "nome": "Bacalhau Zé do Pipo",
+     "descricao": "Lascas de bacalhau gratinado no purê, catupiry e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 219,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 219,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 309,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bacalhau-z-e-do-pipo.jpg"
+    },
+    {
+     "nome": "Bacalhau Gomes de Sá",
+     "descricao": "Acompanhado de batata corada, ovo cozido, azeitona e arroz a escolher: Branco | Baião* | Brócolis | Maluco | Piamontese | À Grega *Guarnições com baião não acompanham feijão preto e molho à campanha",
+     "preco": "A partir de R$ 219,90",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 219,90"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 309,90"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bacalhau-gomes-de-s-a.jpg"
+    },
+    {
+     "nome": "Strogonoff de Camarão",
+     "descricao": "Acompanhado de arroz branco e batata palha ou fritas",
+     "preco": "A partir de R$ 119,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 119,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 181,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/strogonoff-de-camar-ao.jpg"
+    },
+    {
+     "nome": "Risoto de Camarão",
+     "descricao": "",
+     "preco": "A partir de R$ 112,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 112,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 183,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/risoto-de-frango.jpg"
+    },
+    {
+     "nome": "Escondidinho de Camarão",
+     "descricao": "Gratinado com parmesão e acompanhado de arroz branco",
+     "preco": "A partir de R$ 155,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 155,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 205,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mini-escondidinho-de-camar-ao.jpg"
+    },
+    {
+     "nome": "Camarão Esperança",
+     "descricao": "Camarões empanados recheados com cream cheese, servidos sobre arroz à piamontese cremoso com camarões, ervilha, presunto e especiarias, gratinado com queijo muçarela e parmesão, acompanhado de batata palha.",
+     "preco": "A partir de R$ 235,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 235,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 290,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/camar-ao-esperanca.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-guarnicoes",
+   "nome": "Guarnições",
+   "texto": "Complementos perfeitos para sua refeição",
+   "itens": [
+    {
+     "nome": "Baião",
+     "descricao": "",
+     "preco": "A partir de R$ 32,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 32,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 40,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bai-ao.jpg"
+    },
+    {
+     "nome": "Arroz de Brócolis",
+     "descricao": "",
+     "preco": "A partir de R$ 24,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 30,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arroz-de-br-ocolis.jpg"
+    },
+    {
+     "nome": "Arroz à La Grega",
+     "descricao": "",
+     "preco": "A partir de R$ 24,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 32,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arroz-a-la-grega.jpg"
+    },
+    {
+     "nome": "Arroz Branco",
+     "descricao": "",
+     "preco": "A partir de R$ 19,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 19,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 24,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arroz-branco.jpg"
+    },
+    {
+     "nome": "Arroz Maluco",
+     "descricao": "",
+     "preco": "A partir de R$ 24,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 32,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arroz-maluco.jpg"
+    },
+    {
+     "nome": "Arroz à Piamontese",
+     "descricao": "",
+     "preco": "A partir de R$ 32,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 32,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 39,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arroz-a-piamontese.jpg"
+    },
+    {
+     "nome": "Farofa de Ovos",
+     "descricao": "",
+     "preco": "A partir de R$ 12,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 12,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 14,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/farofa-de-ovos.jpg"
+    },
+    {
+     "nome": "Farofa de Ovos c/Banana",
+     "descricao": "",
+     "preco": "A partir de R$ 13,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 13,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 15,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/farofa-de-ovos-c-banana.jpg"
+    },
+    {
+     "nome": "Molho à Campanha",
+     "descricao": "",
+     "preco": "A partir de R$ 11,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 11,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 13,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/molho-a-campanha.jpg"
+    },
+    {
+     "nome": "Feijão",
+     "descricao": "",
+     "preco": "A partir de R$ 11,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 11,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 13,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/feij-ao.jpg"
+    },
+    {
+     "nome": "Purê de Batata",
+     "descricao": "",
+     "preco": "A partir de R$ 24,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 36,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/pur-e-de-batata.jpg"
+    },
+    {
+     "nome": "Feijão Tropeiro",
+     "descricao": "",
+     "preco": "A partir de R$ 24,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 24,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 32,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/feij-ao-tropeiro.jpg"
+    },
+    {
+     "nome": "Molho de Alcaparras",
+     "descricao": "",
+     "preco": "A partir de R$ 15,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 15,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 21,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/molho-de-alcaparras.jpg"
+    },
+    {
+     "nome": "Bife de Picanha Simples",
+     "descricao": "",
+     "preco": "R$ 43,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-2.jpg"
+    },
+    {
+     "nome": "Bife de Contra Filé Simples",
+     "descricao": "",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e-a-francesa.jpg"
+    },
+    {
+     "nome": "Bife de Filé Miignon Simples",
+     "descricao": "",
+     "preco": "R$ 37,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-mignon.png"
+    },
+    {
+     "nome": "Filé de Frango Simples",
+     "descricao": "",
+     "preco": "R$ 19,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frango-grelhado.jpg"
+    },
+    {
+     "nome": "Salmão Simples",
+     "descricao": "",
+     "preco": "R$ 36,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salm-ao-simples.jpg"
+    },
+    {
+     "nome": "Picanha Suína",
+     "descricao": "",
+     "preco": "R$ 24,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/picanha-su-ina.jpg"
+    },
+    {
+     "nome": "Linguiça Toscana",
+     "descricao": "",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/linguica-toscana.jpg"
+    },
+    {
+     "nome": "Carré",
+     "descricao": "",
+     "preco": "R$ 15,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carr-e.jpg"
+    },
+    {
+     "nome": "Filé de Peixe",
+     "descricao": "",
+     "preco": "R$ 19,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-peixe.jpg"
+    },
+    {
+     "nome": "Omelete Misto",
+     "descricao": "",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/omelete-misto.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-saladas",
+   "nome": "Saladas",
+   "texto": "Combinações leves e saborosas para seu bem-estar",
+   "itens": [
+    {
+     "nome": "Alface c/Tomate e Cebola",
+     "descricao": "",
+     "preco": "A partir de R$ 17,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 17,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 21,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/alface-c-tomate-e-cebola.jpg"
+    },
+    {
+     "nome": "Salada Caesar",
+     "descricao": "",
+     "preco": "A partir de R$ 21,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 21,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 28,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salada-caesar.jpg"
+    },
+    {
+     "nome": "Salada de Palmito",
+     "descricao": "",
+     "preco": "A partir de R$ 34,00",
+     "variacoes": [
+      {
+       "nome": "Média",
+       "preco": "R$ 34,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 47,70"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salada-de-palmito.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-pratos-kids",
+   "nome": "Pratos Kids",
+   "texto": "Refeições nutritivas que as crianças adoram",
+   "itens": [
+    {
+     "nome": "Filé de Frango",
+     "descricao": "Tirinhas de frango grelhado, batata sorriso, arroz branco e feijão",
+     "preco": "R$ 26,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fil-e-de-frango-2.jpg"
+    },
+    {
+     "nome": "Nuggets",
+     "descricao": "Nuggets de frango, batata sorriso, arroz branco e feijão",
+     "preco": "R$ 26,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/nuggets.jpg"
+    },
+    {
+     "nome": "Contra Filé",
+     "descricao": "Tirinhas de contra filé grelhado, batata sorriso, arroz branco e feijão",
+     "preco": "R$ 28,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/contra-fil-e-2.jpg"
+    },
+    {
+     "nome": "Baby Aperitivo",
+     "descricao": "Porção de Nuggets, batata sorriso e molho especial",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/baby-aperitivo.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-pizzas",
+   "nome": "Pizzas",
+   "texto": "A pizza perfeita para qualquer ocasião",
+   "itens": [
+    {
+     "nome": "Adicionar Borda Recheada",
+     "descricao": "Doce de leite, cheddar, cream cheese, catupiry ou chocolate",
+     "preco": "A partir de R$ 7,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 7,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 9,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 12,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 17,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/adicionar-borda-recheada.jpg"
+    },
+    {
+     "nome": "Americana",
+     "descricao": "Muçarela, cheddar, bacon, ovo, cebola, azeitona e molho",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 62,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/americana.jpg"
+    },
+    {
+     "nome": "Napolitana",
+     "descricao": "Tomate, muçarela, parmesão, orégano e molho da casa",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 57,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/napolitana.jpg"
+    },
+    {
+     "nome": "Portuguesa",
+     "descricao": "Tomate, pimentão, cebola, ovo, presunto e calabresa",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 62,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/portuguesa.jpg"
+    },
+    {
+     "nome": "Camarão com Catupiry",
+     "descricao": "",
+     "preco": "A partir de R$ 48,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 48,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 62,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 81,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 94,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/camar-ao-com-catupiry.jpg"
+    },
+    {
+     "nome": "Muçarela",
+     "descricao": "Muçarela e orégano",
+     "preco": "A partir de R$ 33,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 33,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 36,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 48,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 59,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mucarela.jpg"
+    },
+    {
+     "nome": "Calabresa",
+     "descricao": "Calabresa, muçarela e cebola",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/calabresa.jpg"
+    },
+    {
+     "nome": "Presunto",
+     "descricao": "Presunto, muçarela e orégano",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/presunto.jpg"
+    },
+    {
+     "nome": "Margherita",
+     "descricao": "Manjericão, muçarela e tomate",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/margherita.jpg"
+    },
+    {
+     "nome": "Palmito",
+     "descricao": "Palmito e muçarela",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 64,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 77,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/palmito.jpg"
+    },
+    {
+     "nome": "Esperança (da casa)",
+     "descricao": "Muçarela, calabresa, bacon, cebola e azeitonas",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 62,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/esperanca-da-casa.jpg"
+    },
+    {
+     "nome": "Salame",
+     "descricao": "Salame e muçarela",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salame.jpg"
+    },
+    {
+     "nome": "Frango com Catupiry",
+     "descricao": "Frango desfiado, muçarela e catupiry",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frango-com-catupiry.jpg"
+    },
+    {
+     "nome": "Atum",
+     "descricao": "Atum com muçarela",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 64,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 77,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/atum.jpg"
+    },
+    {
+     "nome": "Carne Seca c/Catupiry",
+     "descricao": "Carne seca acebolada, muçarela e catupiry",
+     "preco": "A partir de R$ 40,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 40,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 46,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 65,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 78,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-seca-c-catupiry.jpg"
+    },
+    {
+     "nome": "Champignon",
+     "descricao": "Champignon e muçarela",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 64,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 76,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/champignon.jpg"
+    },
+    {
+     "nome": "Carne de Sol",
+     "descricao": "Carne de sol e muçarela",
+     "preco": "A partir de R$ 39,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 45,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 64,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carne-de-sol-2.jpg"
+    },
+    {
+     "nome": "Quatro Queijos",
+     "descricao": "Parmesão, gorgonzola, provolone e mussarela",
+     "preco": "A partir de R$ 35,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 41,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 54,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 65,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/quatro-queijos.jpg"
+    },
+    {
+     "nome": "Morango c/Chocolate",
+     "descricao": "",
+     "preco": "A partir de R$ 40,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 40,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 51,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 63,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/morango-c-chocolate.jpg"
+    },
+    {
+     "nome": "Banana",
+     "descricao": "Banana com canela",
+     "preco": "A partir de R$ 32,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 32,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 39,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 51,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 63,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/banana.jpg"
+    },
+    {
+     "nome": "Romeu e Julieta",
+     "descricao": "Goiabada com catupiry",
+     "preco": "A partir de R$ 40,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 40,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 51,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 63,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 75,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/romeu-e-julieta.jpg"
+    },
+    {
+     "nome": "Chocolate",
+     "descricao": "",
+     "preco": "A partir de R$ 38,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 38,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 50,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 62,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 74,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chocolate.jpg"
+    },
+    {
+     "nome": "Chocolate c/M&M's",
+     "descricao": "",
+     "preco": "A partir de R$ 42,00",
+     "variacoes": [
+      {
+       "nome": "Broto",
+       "preco": "R$ 42,00"
+      },
+      {
+       "nome": "Média",
+       "preco": "R$ 53,00"
+      },
+      {
+       "nome": "Grande",
+       "preco": "R$ 65,00"
+      },
+      {
+       "nome": "Família",
+       "preco": "R$ 81,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chocolate-c-m-m-s.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-sobremesas",
+   "nome": "Sobremesas",
+   "texto": "Finalize com chave de ouro, prove nossas sobremesas",
+   "itens": [
+    {
+     "nome": "Petit Gateau",
+     "descricao": "",
+     "preco": "R$ 28,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/petit-gateau.jpg"
+    },
+    {
+     "nome": "Banana Split",
+     "descricao": "",
+     "preco": "R$ 21,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/banana-split.jpg"
+    },
+    {
+     "nome": "Brownie",
+     "descricao": "",
+     "preco": "R$ 24,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/brownie.jpg"
+    },
+    {
+     "nome": "Sundae",
+     "descricao": "",
+     "preco": "R$ 19,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/sundae.jpg"
+    },
+    {
+     "nome": "Churros na Taça",
+     "descricao": "",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/churros-na-taca.jpg"
+    },
+    {
+     "nome": "Bolo de Pote",
+     "descricao": "",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bolo-de-pote.jpg"
+    },
+    {
+     "nome": "Fatia de Pudim",
+     "descricao": "",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fatia-de-pudim.jpg"
+    },
+    {
+     "nome": "Fatia de Torta",
+     "descricao": "",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mix-esperanca.jpg"
+    },
+    {
+     "nome": "Fatia de Torta Di Norma",
+     "descricao": "",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fatia-de-torta-di-norma.jpg"
+    },
+    {
+     "nome": "Cocada de Forno Cremosa c/Sorvete de Tapioca",
+     "descricao": "",
+     "preco": "R$ 33,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cocada-de-forno-cremosa-c-sorvete-de-tapioca.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-sem-alcool",
+   "nome": "Sem Álcool",
+   "texto": "Sucos, refrigerantes e outras bebidas sem álcool.",
+   "itens": [
+    {
+     "nome": "Água Mineral",
+     "descricao": "Com ou sem gás",
+     "preco": "R$ 4,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/agua-mineral.jpg"
+    },
+    {
+     "nome": "Suco da Fruta",
+     "descricao": "300ml",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/suco-da-fruta.jpg"
+    },
+    {
+     "nome": "Jarra de Suco 1,1L",
+     "descricao": "",
+     "preco": "R$ 29,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jarra-de-suco-1-1l.jpg"
+    },
+    {
+     "nome": "Jarra de Suco 1,5L",
+     "descricao": "",
+     "preco": "R$ 37,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jarra-de-suco-1-1l.jpg"
+    },
+    {
+     "nome": "Suco Del Vale",
+     "descricao": "Pêssego ou uva",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/suco-del-vale.jpg"
+    },
+    {
+     "nome": "Coca Cola",
+     "descricao": "290ml",
+     "preco": "R$ 7,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coca-cola.jpg"
+    },
+    {
+     "nome": "Refrigerantes Lata",
+     "descricao": "350ml",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/refrigerantes-lata.jpg"
+    },
+    {
+     "nome": "Água Tônica",
+     "descricao": "350ml",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/agua-t-onica.jpg"
+    },
+    {
+     "nome": "Coca Cola 600ml",
+     "descricao": "",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coca-cola-600ml.jpg"
+    },
+    {
+     "nome": "Fanta 600ml",
+     "descricao": "",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fanta-600ml.jpg"
+    },
+    {
+     "nome": "Coca Cola 1,5L",
+     "descricao": "",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coca-cola-1-5l.jpg"
+    },
+    {
+     "nome": "Coca Cola 2L",
+     "descricao": "",
+     "preco": "R$ 18,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coca-cola-2l.jpg"
+    },
+    {
+     "nome": "Fanta 2L",
+     "descricao": "",
+     "preco": "R$ 18,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fanta-2l.jpg"
+    },
+    {
+     "nome": "Sprite 2L",
+     "descricao": "",
+     "preco": "R$ 18,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/sprite-2l.jpg"
+    },
+    {
+     "nome": "Antártica 2L",
+     "descricao": "",
+     "preco": "R$ 18,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ant-artica-2l.jpg"
+    },
+    {
+     "nome": "H2O",
+     "descricao": "500ml",
+     "preco": "R$ 9,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/h2o.jpg"
+    },
+    {
+     "nome": "Guaraviton",
+     "descricao": "500ml",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/guaraviton.jpg"
+    },
+    {
+     "nome": "Guaravita",
+     "descricao": "290ml",
+     "preco": "R$ 4,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/guaravita.jpg"
+    },
+    {
+     "nome": "Ice Tea Pêssego",
+     "descricao": "300ml",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ice-tea-p-essego.jpg"
+    },
+    {
+     "nome": "Red Bull",
+     "descricao": "",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/red-bull.jpg"
+    },
+    {
+     "nome": "Red Bull Sabores",
+     "descricao": "",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/red-bull-sabores.webp"
+    }
+   ]
+  },
+  {
+   "id": "menu-cervejas",
+   "nome": "Cervejas",
+   "texto": "",
+   "itens": [
+    {
+     "nome": "Antarctica",
+     "descricao": "600ml",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/antarctica.jpg"
+    },
+    {
+     "nome": "Original",
+     "descricao": "600ml",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/original.jpg"
+    },
+    {
+     "nome": "Brahma",
+     "descricao": "600ml",
+     "preco": "R$ 13,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/brahma.jpg"
+    },
+    {
+     "nome": "Skol",
+     "descricao": "600ml",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/skol.jpg"
+    },
+    {
+     "nome": "Heineken",
+     "descricao": "600ml",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/heineken.jpg"
+    },
+    {
+     "nome": "Stella Artois",
+     "descricao": "600ml",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/stella-artois.png"
+    },
+    {
+     "nome": "Spaten",
+     "descricao": "600ml",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/spaten.png"
+    },
+    {
+     "nome": "Becks",
+     "descricao": "600ml",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/becks.jpg"
+    },
+    {
+     "nome": "Brahma Duplo Malte",
+     "descricao": "600ml",
+     "preco": "R$ 13,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/brahma-duplo-malte.jpg"
+    },
+    {
+     "nome": "Heineken",
+     "descricao": "355ml",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/heineken-2.jpg"
+    },
+    {
+     "nome": "Stella Artois",
+     "descricao": "355ml",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/stella-artois.jpg"
+    },
+    {
+     "nome": "Corona",
+     "descricao": "355ml",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/corona.jpg"
+    },
+    {
+     "nome": "Spaten",
+     "descricao": "355ml",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/spaten.jpg"
+    },
+    {
+     "nome": "Becks",
+     "descricao": "355ml",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/becks-2.jpg"
+    },
+    {
+     "nome": "Brahma Malzebier",
+     "descricao": "355ml",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/brahma-malzebier.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-chopps",
+   "nome": "Chopps",
+   "texto": "Chope na caneca zero grau, caldereta, tulipa e chope de vinho.",
+   "itens": [
+    {
+     "nome": "Tulipa",
+     "descricao": "Brahma",
+     "preco": "R$ 8,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/tulipa.jpg"
+    },
+    {
+     "nome": "Caneca Zero Grau",
+     "descricao": "",
+     "preco": "R$ 10,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caneca-zero-grau.jpg"
+    },
+    {
+     "nome": "Caldereta",
+     "descricao": "",
+     "preco": "R$ 10,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caldereta.jpg"
+    },
+    {
+     "nome": "Vinho Tulipa",
+     "descricao": "",
+     "preco": "R$ 6,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-tulipa.jpg"
+    },
+    {
+     "nome": "Vinho Caneca Zero Grau",
+     "descricao": "",
+     "preco": "R$ 8,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-caneca-zero-grau.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-carta-de-vinho",
+   "nome": "Carta de Vinho",
+   "texto": "",
+   "itens": [
+    {
+     "nome": "Casa Perini Rosé Aquarela",
+     "descricao": "Harmonização: Pratos leve como carnes brancas, salmão e saladas, o espumante doce e refrescante de paladar super agradável uma excelente opção para você brindar e comemorar seus momentos inesquecíveis",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/casa-perini-ros-e-aquarela.jpg"
+    },
+    {
+     "nome": "Casa Perini Brut",
+     "descricao": "Harmonização: Pratos leve como carnes brancas, peixes e saladas, o espumante de refrescante e paladar agradável é uma excelente opção para você brindar e comemorar seus momentos inesquecíveis com amigos",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/casa-perini-brut.jpg"
+    },
+    {
+     "nome": "Espumante Salton Brut",
+     "descricao": "Aroma frutado e refrescante, com nota cítrica. Harmonização: Entradas leves como empadinhas e saladas com molho leve, harmonize também com seu paladar e seu momento",
+     "preco": "R$ 60,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/espumante-salton-brut.jpg"
+    },
+    {
+     "nome": "Espumante Salton Rosé Moscato",
+     "descricao": "Espumante com uma doçura inigualável, para beber bem gelado nos dias quentes do Rio de Janeiro, sua refrescância é sedutora. Harmonização: Pratos leves como queijo, carnes brancas saladas e até mesmo sobremesa",
+     "preco": "R$ 60,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/espumante-salton-ros-e-moscato.jpg"
+    },
+    {
+     "nome": "Chandon Réserve",
+     "descricao": "Espumante Chandon Reserve Brut 750 ml, de Garibaldi, na tradicional região da Serra Gaúcha. Harmonize com: saladas verdes, queijos leves, carne branca ou com sua comemoração, afinal um brinde com Chandon é especial",
+     "preco": "R$ 120,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chandon-r-eserve.jpg"
+    },
+    {
+     "nome": "Veuve Clicquot",
+     "descricao": "",
+     "preco": "R$ 600,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/veuve-clicquot.jpg"
+    },
+    {
+     "nome": "Casal Garcia",
+     "descricao": "Vinho verde português Amarelo palha com toques esverdeado. Delicado, levemente frutado, com toques florais. Suave, fresco, jovem, equilibrado. Boa acidez. Aspecto límpido e ligeiramente efervescente",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/casal-garcia.jpg"
+    },
+    {
+     "nome": "Almaden",
+     "descricao": "Vinho de coloração rubi, jovem, de aroma frutado e notas mentoladas, com taninos finos e harmônicos. Harmonizando perfeitamente com carnes acompanhado de baião",
+     "preco": "R$ 50,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/almaden.jpg"
+    },
+    {
+     "nome": "Vinho Origem casa Valduga",
+     "descricao": "Harmonização: Carnes vermelhas grelhadas, massas, baião e queijos suaves.",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-origem-casa-valduga.jpg"
+    },
+    {
+     "nome": "Salton Desejo",
+     "descricao": "Harmonização: Carnes vermelhas, costela suína, sendo excelente para acompanhar o típico churrasco misto, massas com molhos fortes. Harmoniza muito bem com baião",
+     "preco": "R$ 145,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/salton-desejo.jpg"
+    },
+    {
+     "nome": "Vinho Miolo Reserva",
+     "descricao": "Ideal para harmonizar com arroz maluco, carne vermelha, feijoada, baião de dois, pizzas clássicas e queijos maturados",
+     "preco": "R$ 84,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-miolo-reserva.jpg"
+    },
+    {
+     "nome": "Concha y Toro Reservado",
+     "descricao": "Notas florais. Paladar confirma o olfato, com taninos suaves. Harmonização com carnes vermelhas e baião",
+     "preco": "R$ 60,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/concha-y-toro-reservado.jpg"
+    },
+    {
+     "nome": "Vinho Tarapacá",
+     "descricao": "Harmonização: Massas que levem molhos cremosos, carne assada, pescados ricos em gordura como atum e salmão, carnes vermelhas grelhadas e queijo curado",
+     "preco": "R$ 149,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-tarapac-a.jpg"
+    },
+    {
+     "nome": "Periquita",
+     "descricao": "Corpo Médio, Frutado, Macio, Taninos Suaves Harmonização: com Carnes Vermelhas, Carnes seca, Queijos maduros e baião",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/periquita.jpg"
+    },
+    {
+     "nome": "Crios",
+     "descricao": "Uva: Malbec | Região: Mendoza, Argentina | Cor: Rubi intenso | Aroma: Frutas vermelhas (amora, mirtilo), especiarias (canela, cravo) e notas de baunilha | Sabor: Suave, com taninos macios, frutas maduras e final longo Harmonização Carnes vermelhas (carne de boi, cordeiro) Queijos robustos (Parmigiano, Cheddar) Pratos de molho rico",
+     "preco": "R$ 120,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/crios.jpg"
+    },
+    {
+     "nome": "San Telmo",
+     "descricao": "Um vinho tinto vibrante, com notas de frutas vermelhas maduras e um toque sutil de especiarias. Elegante e fácil de beber",
+     "preco": "R$ 89,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/san-telmo.png"
+    }
+   ]
+  },
+  {
+   "id": "menu-doses",
+   "nome": "Doses",
+   "texto": "",
+   "itens": [
+    {
+     "nome": "Vodka Absolut",
+     "descricao": "Dose",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-absolut.jpg"
+    },
+    {
+     "nome": "Vodka Orloff",
+     "descricao": "Dose",
+     "preco": "R$ 7,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-orloff.jpg"
+    },
+    {
+     "nome": "Vodka Stolichnaya",
+     "descricao": "Dose",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-stolichnaya.jpg"
+    },
+    {
+     "nome": "Vodka Smirnoff",
+     "descricao": "Dose",
+     "preco": "R$ 11,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-smirnoff.jpg"
+    },
+    {
+     "nome": "Vodka Kovak",
+     "descricao": "Dose",
+     "preco": "R$ 7,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-kovak.jpg"
+    },
+    {
+     "nome": "Tequila Ouro",
+     "descricao": "Dose",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/tequila-ouro.jpg"
+    },
+    {
+     "nome": "Tequila Prata",
+     "descricao": "Dose",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/tequila-prata.jpg"
+    },
+    {
+     "nome": "Montilla Sabores",
+     "descricao": "Dose",
+     "preco": "R$ 8,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/montilla-sabores.jpg"
+    },
+    {
+     "nome": "Cachaça Matuta Mel e Limão",
+     "descricao": "Dose",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cachaca-matuta-mel-e-lim-ao.jpg"
+    },
+    {
+     "nome": "Cachaça Gabriela",
+     "descricao": "Dose",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cachaca-gabriela.jpg"
+    },
+    {
+     "nome": "Cachaça Jambuzada Sabores",
+     "descricao": "Dose",
+     "preco": "R$ 12,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cachaca-jambuzada-sabores.jpg"
+    },
+    {
+     "nome": "Campari",
+     "descricao": "Dose",
+     "preco": "R$ 10,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/campari.jpg"
+    },
+    {
+     "nome": "Caneca de Vinho",
+     "descricao": "",
+     "preco": "R$ 17,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vinho-caneca-zero-grau.jpg"
+    },
+    {
+     "nome": "Taça de Vinho",
+     "descricao": "",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/taca-de-vinho.jpg"
+    },
+    {
+     "nome": "Amarula",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/amarula.jpg"
+    },
+    {
+     "nome": "Cointreau",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cointreau.jpg"
+    },
+    {
+     "nome": "Licor 43",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/licor-43.jpg"
+    },
+    {
+     "nome": "Frangélico",
+     "descricao": "Dose",
+     "preco": "R$ 22,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/frang-elico.jpg"
+    },
+    {
+     "nome": "Malibu",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/malibu.jpg"
+    },
+    {
+     "nome": "Red Label",
+     "descricao": "Dose",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/red-label.jpg"
+    },
+    {
+     "nome": "Ballantine’s 12 anos",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ballantine-s-12-anos.jpg"
+    },
+    {
+     "nome": "Ballantine’s 8 anos",
+     "descricao": "Dose",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ballantine-s-8-anos.jpg"
+    },
+    {
+     "nome": "Chivas",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chivas.jpg"
+    },
+    {
+     "nome": "Teacher’s",
+     "descricao": "Dose",
+     "preco": "R$ 14,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/teacher-s.jpg"
+    },
+    {
+     "nome": "Logan",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/logan.jpg"
+    },
+    {
+     "nome": "Jack Daniel’s",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jack-daniel-s.jpg"
+    },
+    {
+     "nome": "Dimple",
+     "descricao": "Dose",
+     "preco": "R$ 49,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/dimple.jpg"
+    },
+    {
+     "nome": "Black Label",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/black-label.png"
+    },
+    {
+     "nome": "Buchanan’s",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/buchanan-s.jpg"
+    },
+    {
+     "nome": "Cavalo branco",
+     "descricao": "Dose",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cavalo-branco.jpg"
+    },
+    {
+     "nome": "JB",
+     "descricao": "Dose",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jb.jpg"
+    },
+    {
+     "nome": "Black White",
+     "descricao": "Dose",
+     "preco": "R$ 16,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/black-white.jpg"
+    },
+    {
+     "nome": "Old Parr",
+     "descricao": "Dose",
+     "preco": "R$ 20,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/old-parr.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-drinks",
+   "nome": "Drinks",
+   "texto": "Caipirões e os drinks da casa, como Maria Bonita e Lampião.",
+   "itens": [
+    {
+     "nome": "Esperança",
+     "descricao": "Gin, Aperol, gengibre, capim limão, caju, suco de maracujá, suco de tangerina, suco de limão e espuma cítrica",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/esperanca.jpg"
+    },
+    {
+     "nome": "Tentação",
+     "descricao": "Gin, Cointreau, pimenta rosa, morango, suco de limão e espuma de cereja com pimenta",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/tentac-ao.jpg"
+    },
+    {
+     "nome": "Expresso Martine",
+     "descricao": "",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/6aa1e23fdce578.91418624.webp"
+    },
+    {
+     "nome": "Acalma Coração",
+     "descricao": "Gin, suco de limão, xarope de maracujá com tangerina e espuma de gengibre",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/acalma-corac-ao.jpg"
+    },
+    {
+     "nome": "Fruto Proibido",
+     "descricao": "Gin, Licor triple seco, Xarope de maça, Maçã verde ½ maçã, abacaxi, Suco de limão, Espuma de gengibre",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/fruto-proibido.jpg"
+    },
+    {
+     "nome": "Lampião",
+     "descricao": "Tequila Jose Cuervo, Suco de caju, Suco de limão, Xarope de pimenta nordestino, Farofa de castanha de caju",
+     "preco": "R$ 34,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/lampi-ao.jpg"
+    },
+    {
+     "nome": "Maria Bonita",
+     "descricao": "Gin, Tomate cereja, Morango, Suco de limão, Calda de lichia, Xarope de alecrim",
+     "preco": "R$ 34,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/maria-bonita.jpg"
+    },
+    {
+     "nome": "Jack Cream",
+     "descricao": "Jack Daniel's, Creme de cacau, Morangos, Limão siciliano",
+     "preco": "R$ 34,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jack-cream.jpg"
+    },
+    {
+     "nome": "Do Chefe",
+     "descricao": "Gin, Aperol, Pitaya, Suco de limão, Suco de laranja, Espuma de gengibre",
+     "preco": "R$ 35,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/do-chefe.jpg"
+    },
+    {
+     "nome": "Por do Sol",
+     "descricao": "Vodka, Morango, Xarope de gengibre, Suco de limão, Espuma de gengibre",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/por-do-sol.jpg"
+    },
+    {
+     "nome": "Mandacaru",
+     "descricao": "Gin, Aperol, Suco de cajá, Suco de limão, Espuma de garapa de caldo de cana",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mandacaru.jpg"
+    },
+    {
+     "nome": "Mojito Nordestino",
+     "descricao": "Run, Suco de limão, Hortelã, Rapadura, Água gasificada",
+     "preco": "R$ 28,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mojito-nordestino.jpg"
+    },
+    {
+     "nome": "Mango Frozen",
+     "descricao": "Manga, Vodka, Baunilha, Hortelã",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/mango-frozen.jpg"
+    },
+    {
+     "nome": "Açai Frozen",
+     "descricao": "Açaí, Morango, Vodka, Licor de frangélico",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/acai-frozen.jpg"
+    },
+    {
+     "nome": "Amarula Frozen",
+     "descricao": "Amarula, Sorvete de creme, Espuma de chocolate, Raspas de chocolate",
+     "preco": "R$ 35,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/amarula-frozen.jpg"
+    },
+    {
+     "nome": "Amor de Verão",
+     "descricao": "Gin, Aperol, Purê de frutas vermelhas, Espuma de cereja com pimenta",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/amor-de-ver-ao.jpg"
+    },
+    {
+     "nome": "Coconut",
+     "descricao": "Gin, Xarope de coco, Limão siciliano, Espuma de coco",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coconut.jpg"
+    },
+    {
+     "nome": "Ficha Limpa",
+     "descricao": "Gin beefeater Pink, purê de manga, xarope de morango, suco de limão e espuma de gengibre",
+     "preco": "R$ 33,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ficha-limpa.jpg"
+    },
+    {
+     "nome": "Bali",
+     "descricao": "Gin, Xarope de Melancia, Abacaxi, Melancia, Limão siciliano, Espuma cítrica",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bali.jpg"
+    },
+    {
+     "nome": "Rei do Jet",
+     "descricao": "Whisky de maçã verde, caramelo salgado, capim santo, caju, maracujá, limão laranja, espuma de gengibre",
+     "preco": "R$ 33,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/rei-do-jet.jpg"
+    },
+    {
+     "nome": "Torre Aperol Esperança",
+     "descricao": "Espumante, Aperol, xarope de morango, frutas, água gasificada",
+     "preco": "R$ 112,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/torre-aperol-esperanca.jpg"
+    },
+    {
+     "nome": "Arretada",
+     "descricao": "Cachaça de frutas vermelha, limão siciliano limão Taiti, xarope de morango, espuma de gengibre",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/arretada.jpg"
+    },
+    {
+     "nome": "Sabor do Sertão",
+     "descricao": "Gin licor de coco, tamarindo xarope de gengibre, suco de limão, espuma de cereja com pimenta",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ficha-limpa.jpg"
+    },
+    {
+     "nome": "Pina Colada",
+     "descricao": "Run, abacaxi, leite de coco e leite condensado",
+     "preco": "R$ 28,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/pina-colada.jpg"
+    },
+    {
+     "nome": "Margarita",
+     "descricao": "Tequila Jose Cuervo, licor triple seco e suco de limão",
+     "preco": "R$ 31,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/margarita.jpg"
+    },
+    {
+     "nome": "Sexy on the Beach",
+     "descricao": "Vodka, licor de pêssego, licor triple seco e Granadina",
+     "preco": "R$ 29,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/sexy-on-the-beach.jpg"
+    },
+    {
+     "nome": "Gin Tônica",
+     "descricao": "Gin, água tônica, especiarias e limão siciliano",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/gin-t-onica.jpg"
+    },
+    {
+     "nome": "Vodka e Red Bull",
+     "descricao": "Escolha seu sabor",
+     "preco": "R$ 40,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-e-red-bull.jpg"
+    },
+    {
+     "nome": "Meia Sete",
+     "descricao": "Gin, limão e Red Bull sugar free",
+     "preco": "R$ 40,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/meia-sete.jpg"
+    },
+    {
+     "nome": "Melancita",
+     "descricao": "Gin e Red Bull Melancia",
+     "preco": "R$ 40,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/melancita.jpg"
+    },
+    {
+     "nome": "Lagoa Azul",
+     "descricao": "Vodka, Curaçau blue, soda, suco de limão e espuma de cítrica de pimenta",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/lagoa-azul.png"
+    },
+    {
+     "nome": "Gin tropical",
+     "descricao": "Redbull lata, Gin e guarnição de frutas tropicais",
+     "preco": "R$ 40,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-e-red-bull.jpg"
+    },
+    {
+     "nome": "Moscow Mule",
+     "descricao": "Vodka, suco de limão, xarope de açúcar e espuma de gengibre",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/moscow-mule.jpg"
+    },
+    {
+     "nome": "Aperol Spritz",
+     "descricao": "Aperol, espumante, laranja fatia e água com gás",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/aperol-spritz.jpg"
+    },
+    {
+     "nome": "Negroni",
+     "descricao": "Gin, Campari, Vermute e laranja",
+     "preco": "R$ 31,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/negroni.jpg"
+    },
+    {
+     "nome": "Carajillo",
+     "descricao": "Licor 43, café expresso e gelo",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/carajillo.jpg"
+    },
+    {
+     "nome": "Soda Italiana",
+     "descricao": "Consulte os sabores",
+     "preco": "R$ 12,90",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/soda-italiana.jpg"
+    },
+    {
+     "nome": "Coquetel de Frutas",
+     "descricao": "Vodka, suco de frutas e leite condensado",
+     "preco": "R$ 28,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/coquetel-de-frutas.jpg"
+    },
+    {
+     "nome": "Caipirinha",
+     "descricao": "Limão, morango, abacaxi, kiwi ou maracujá",
+     "preco": "A partir de R$ 19,00",
+     "variacoes": [
+      {
+       "nome": "Tradicional",
+       "preco": "R$ 19,00"
+      },
+      {
+       "nome": "Especial",
+       "preco": "R$ 25,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caipirinha.jpg"
+    },
+    {
+     "nome": "Caipi Vodka",
+     "descricao": "Limão, morango, abacaxi, kiwi ou maracujá",
+     "preco": "A partir de R$ 21,00",
+     "variacoes": [
+      {
+       "nome": "Nacional",
+       "preco": "R$ 21,00"
+      },
+      {
+       "nome": "Importada",
+       "preco": "R$ 29,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caipirinha.jpg"
+    },
+    {
+     "nome": "Caipilé de Frutas Vermelhas",
+     "descricao": "Vodka, Purê de frutas vermelhas, Picolé 1 un",
+     "preco": "R$ 30,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caipil-e-de-frutas-vermelhas.jpg"
+    },
+    {
+     "nome": "Caipi Daniel´s",
+     "descricao": "Caipi Daniel´s, Jack Daniels, Limão taiti, Rapadura, Hortelã",
+     "preco": "R$ 32,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caipi-daniel-s.jpg"
+    },
+    {
+     "nome": "Caipirão",
+     "descricao": "Na caneca zero grau. Limão, morango, abacaxi, kiwi ou maracujá",
+     "preco": "A partir de R$ 30,00",
+     "variacoes": [
+      {
+       "nome": "Vodka Nacional",
+       "preco": "R$ 30,00"
+      },
+      {
+       "nome": "Cachaça Tradicional",
+       "preco": "R$ 31,00"
+      },
+      {
+       "nome": "Vodka Importada",
+       "preco": "R$ 35,00"
+      },
+      {
+       "nome": "Cachaça Especial",
+       "preco": "R$ 36,00"
+      }
+     ],
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/caipir-ao.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-combos",
+   "nome": "Combos",
+   "texto": "",
+   "itens": [
+    {
+     "nome": "COMBO RED LABEL 1L",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-red-label-1l.jpg"
+    },
+    {
+     "nome": "COMBO SMIRNOFF",
+     "descricao": "",
+     "preco": "R$ 170,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-smirnoff.jpg"
+    },
+    {
+     "nome": "COMBO GOLD LABEL",
+     "descricao": "",
+     "preco": "R$ 460,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-gold-label.jpg"
+    },
+    {
+     "nome": "COMBO TANQUERAY",
+     "descricao": "",
+     "preco": "R$ 310,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-tanqueray.jpg"
+    },
+    {
+     "nome": "COMBO BUCHANNANS",
+     "descricao": "",
+     "preco": "R$ 330,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-buchannans.jpg"
+    },
+    {
+     "nome": "COMBO OLD PARR 1L",
+     "descricao": "",
+     "preco": "R$ 330,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/old-parr.jpg"
+    },
+    {
+     "nome": "COMBO BLACK LABEL",
+     "descricao": "",
+     "preco": "R$ 330,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-black-label.jpg"
+    },
+    {
+     "nome": "COMBO CHIVAS REGAL",
+     "descricao": "",
+     "preco": "R$ 330,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chivas.jpg"
+    },
+    {
+     "nome": "COMBO ABSOLUT ESPECIAL",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-absolut.jpg"
+    },
+    {
+     "nome": "COMBO VODKA GREYGOOSE",
+     "descricao": "",
+     "preco": "R$ 300,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-vodka-greygoose.jpg"
+    },
+    {
+     "nome": "COMBO SMINOFF RED BULL ESPECIAL",
+     "descricao": "",
+     "preco": "R$ 170,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-smirnoff.jpg"
+    },
+    {
+     "nome": "COMBO BEEFEATER",
+     "descricao": "",
+     "preco": "R$ 310,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-beefeater.jpg"
+    },
+    {
+     "nome": "COMBO BOMBAY",
+     "descricao": "",
+     "preco": "R$ 310,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-bombay.jpg"
+    },
+    {
+     "nome": "COMBO CIROC",
+     "descricao": "",
+     "preco": "R$ 300,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-ciroc.jpg"
+    },
+    {
+     "nome": "COMBO BELVEDERE 700ML",
+     "descricao": "",
+     "preco": "R$ 300,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-belvedere-700ml.jpg"
+    },
+    {
+     "nome": "COMBO BALLANTINES 8 ANOS",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-ballantines-8-anos.jpg"
+    },
+    {
+     "nome": "COMBO BALLANTINES 12 ANOS",
+     "descricao": "",
+     "preco": "R$ 300,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-ballantines-8-anos.jpg"
+    },
+    {
+     "nome": "COMBO BLACK WHITE",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/black-white.jpg"
+    },
+    {
+     "nome": "COMBO WHITE HORSE",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-white-horse.jpg"
+    },
+    {
+     "nome": "COMBO JACK DANIELS",
+     "descricao": "",
+     "preco": "R$ 330,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jack-daniel-s.jpg"
+    },
+    {
+     "nome": "COMBO DOUBLE BLACK",
+     "descricao": "",
+     "preco": "R$ 460,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-double-black.jpg"
+    }
+   ]
+  },
+  {
+   "id": "menu-garrafas",
+   "nome": "Garrafas",
+   "texto": "",
+   "itens": [
+    {
+     "nome": "ROYAL SALUTE",
+     "descricao": "",
+     "preco": "R$ 1.300,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/royal-salute.jpg"
+    },
+    {
+     "nome": "OLD PARR GARRAFA 1L",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/old-parr.jpg"
+    },
+    {
+     "nome": "GARRAFA DE BLACK LABEL",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/garrafa-de-black-label.jpg"
+    },
+    {
+     "nome": "GARRAFA BUCHANAS",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/buchanan-s.jpg"
+    },
+    {
+     "nome": "CAMPARI GARRAFA",
+     "descricao": "",
+     "preco": "R$ 120,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/campari.jpg"
+    },
+    {
+     "nome": "GIN TANQUERAY GARRAFA",
+     "descricao": "",
+     "preco": "R$ 260,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/gin-tanqueray-garrafa.jpg"
+    },
+    {
+     "nome": "GARRAFA DE LICOR 43",
+     "descricao": "",
+     "preco": "R$ 220,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/licor-43.jpg"
+    },
+    {
+     "nome": "GARRAFA DE SMIRNOFF",
+     "descricao": "",
+     "preco": "R$ 120,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-smirnoff.jpg"
+    },
+    {
+     "nome": "DREHER GARRAFA",
+     "descricao": "",
+     "preco": "R$ 50,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/dreher-garrafa.jpg"
+    },
+    {
+     "nome": "RED LABEL GARRAFA 1 LITRO",
+     "descricao": "",
+     "preco": "R$ 230,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/red-label.jpg"
+    },
+    {
+     "nome": "AMARULA GARRAFA 1 LITRO",
+     "descricao": "",
+     "preco": "R$ 200,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/amarula.jpg"
+    },
+    {
+     "nome": "GARRAFA DE GOLD",
+     "descricao": "",
+     "preco": "R$ 400,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-gold-label.jpg"
+    },
+    {
+     "nome": "GARRAFA DE YPIOCA",
+     "descricao": "",
+     "preco": "R$ 50,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/garrafa-de-ypioca.jpg"
+    },
+    {
+     "nome": "GARRAFA DE TEQUILA",
+     "descricao": "",
+     "preco": "R$ 180,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/tequila-ouro.jpg"
+    },
+    {
+     "nome": "BEEFEATER",
+     "descricao": "",
+     "preco": "R$ 260,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/beefeater.jpg"
+    },
+    {
+     "nome": "BOMBAY",
+     "descricao": "",
+     "preco": "R$ 260,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/bombay.jpg"
+    },
+    {
+     "nome": "CHIVAS 1L",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/chivas.jpg"
+    },
+    {
+     "nome": "ABSOLUT ESPECIAL 1L",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/vodka-absolut.jpg"
+    },
+    {
+     "nome": "VODKA GREY GOOSE 700ML",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-vodka-greygoose.jpg"
+    },
+    {
+     "nome": "CIROC 750 ML",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-ciroc.jpg"
+    },
+    {
+     "nome": "VODKA BELVEDERE 700 ML",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-belvedere-700ml.jpg"
+    },
+    {
+     "nome": "BALLANTINES 8 ANOS 1L",
+     "descricao": "",
+     "preco": "R$ 200,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ballantine-s-8-anos.jpg"
+    },
+    {
+     "nome": "BALLANTINES 12 ANOS 1L",
+     "descricao": "",
+     "preco": "R$ 250,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/ballantines-12-anos-1l.jpg"
+    },
+    {
+     "nome": "BLACK WHITE 1L",
+     "descricao": "",
+     "preco": "R$ 200,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/black-white.jpg"
+    },
+    {
+     "nome": "WHITE HORSE 1L",
+     "descricao": "",
+     "preco": "R$ 200,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cavalo-branco.jpg"
+    },
+    {
+     "nome": "Cachaça Gabriela",
+     "descricao": "",
+     "preco": "R$ 60,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cachaca-gabriela.jpg"
+    },
+    {
+     "nome": "Cachaça Jambuzada Sabores",
+     "descricao": "",
+     "preco": "R$ 120,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/cachaca-jambuzada-sabores.jpg"
+    },
+    {
+     "nome": "JACK DANIELS 1L",
+     "descricao": "",
+     "preco": "R$ 280,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/jack-daniel-s.jpg"
+    },
+    {
+     "nome": "DOUBLE BLACK",
+     "descricao": "",
+     "preco": "R$ 400,00",
+     "foto": "https://digitalmenuart.com.br/uploads/empresa_55/combo-double-black.jpg"
+    }
+   ]
+  }
+ ]
 }

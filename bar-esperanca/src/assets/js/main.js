@@ -3,6 +3,42 @@
   var root = document.documentElement;
   root.classList.add("js");
 
+  // Navegação entre as páginas (todas no mesmo arquivo): #inicio, #cardapio,
+  // #a-casa, #contato. Âncoras internas (ex.: #menu-drinks) abrem a página certa.
+  var routes = document.querySelectorAll("[data-route]");
+  var navLinks = document.querySelectorAll(".nav__links a, .sheet__inner a");
+  var currentRoute = null;
+  function showRoute(id, target) {
+    var route = document.getElementById(id);
+    if (!route || !route.hasAttribute("data-route")) return false;
+    var changed = currentRoute !== route;
+    routes.forEach(function (r) { r.classList.toggle("is-active", r === route); });
+    navLinks.forEach(function (a) {
+      if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    document.title = route.getAttribute("data-title") || document.title;
+    currentRoute = route;
+    if (target) {
+      target.scrollIntoView();
+    } else if (changed) {
+      window.scrollTo(0, 0);
+      route.focus({ preventScroll: true });
+    }
+    return true;
+  }
+  function onHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return showRoute("inicio");
+    var el = document.getElementById(id);
+    if (!el) return showRoute("inicio");
+    if (el.hasAttribute("data-route")) return showRoute(id);
+    var parent = el.closest("[data-route]");
+    if (parent) showRoute(parent.id, el);
+  }
+  window.addEventListener("hashchange", onHash);
+  onHash();
+
   // Tema: alterna claro/escuro e lembra a escolha (opcional, falha em silêncio).
   var themeBtn = document.querySelector("[data-theme-toggle]");
   if (themeBtn) {
@@ -88,17 +124,40 @@
         if (link) {
           link.classList.add("is-active");
           link.setAttribute("aria-current", "true");
-          link.scrollIntoView({ block: "nearest", inline: "nearest" });
+          // Rola só a barra de categorias (na horizontal), nunca a página.
+          var track = link.parentElement;
+          track.scrollTo({ left: link.offsetLeft - track.clientWidth / 2 + link.offsetWidth / 2, behavior: "smooth" });
         }
       });
     }, { rootMargin: "-40% 0px -55% 0px" });
-    document.querySelectorAll(".menu-group").forEach(function (g) { spy.observe(g); });
+    document.querySelectorAll(".menu-cat").forEach(function (g) { spy.observe(g); });
+  }
+
+  // Cardápio: busca por nome, descrição ou categoria.
+  var search = document.querySelector("[data-menu-search]");
+  if (search) {
+    var dishes = document.querySelectorAll(".dish");
+    var menuCats = document.querySelectorAll(".menu-cat");
+    var empty = document.querySelector("[data-menu-empty]");
+    var norm = function (s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); };
+    dishes.forEach(function (d) { d.dataset.norm = norm(d.getAttribute("data-search")); });
+    search.addEventListener("input", function () {
+      var q = norm(search.value.trim());
+      var any = false;
+      dishes.forEach(function (d) { d.hidden = q !== "" && d.dataset.norm.indexOf(q) === -1; });
+      menuCats.forEach(function (c) {
+        var visible = c.querySelectorAll(".dish:not([hidden])").length > 0;
+        c.hidden = !visible;
+        if (visible) any = true;
+      });
+      empty.hidden = any;
+    });
   }
 
   // Reserva: valida os campos e monta a mensagem para o WhatsApp.
   var form = document.querySelector("[data-reserve]");
   if (form) {
-    var WA = "5521970125975";
+    var WA = window.WA_NUMBER || "5521984292033";
     var dateInput = form.querySelector("#f-data");
     var today = new Date();
     var iso = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);

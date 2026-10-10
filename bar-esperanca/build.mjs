@@ -1,8 +1,9 @@
-// Monta o site em dist/: junta layout + partes + páginas, gera o cardápio a partir
-// de src/data/cardapio.json e embute CSS, JS e fontes em cada página. O resultado
-// abre com dois cliques (sem servidor) e também sobe em qualquer hospedagem.
+// Monta o site em dist/index.html: um único arquivo com todas as páginas
+// (Início, Cardápio, A casa, Contato), navegação interna por âncoras (#cardapio,
+// #a-casa...) e CSS, JS, fontes e logo embutidos. Abre com dois cliques, mesmo
+// sem extrair o zip, e também sobe em qualquer hospedagem.
 // Uso: node build.mjs   (Node 18+, sem dependências)
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -11,151 +12,162 @@ const src = join(root, "src");
 const out = join(root, "dist");
 
 const SITE = "https://barechoperiaesperanca.com.br";
-const WA = "https://wa.me/5521970125975?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido.";
+const WA_NUMBER = "5521984292033";
+const WA = `https://wa.me/${WA_NUMBER}?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido.`;
 
-// Fotos provisórias (geradas por IA). Troque pelas fotos reais do bar:
-// salve em src/assets/img e use, por exemplo, "assets/img/picanha.webp".
+// Fotos reais da casa (cardápio digital oficial).
+const DM = "https://digitalmenuart.com.br/uploads/empresa_55/";
+// Imagens geradas por IA (só onde não há foto real): sem mar nem paisagem.
 const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_3FjM8DdHcxZCUrb8JPqKpFoJ3op/";
 const IMG = {
-  picanha: CDN + "hf_20261010_132901_f4ac8fb9-7472-4d5c-ac1f-a29dbd0fd54f.png",
-  tilapia: CDN + "hf_20261010_132920_7638a504-296a-46b1-a8aa-9c5425c27262.png",
+  picanha: CDN + "hf_20261010_141121_cbb1c0e5-9b4d-4667-92d6-dab0910f3529.png",
+  chope: CDN + "hf_20261010_141122_b55f9db8-50f8-46e0-bd89-dfb6872552f2.png",
+  salao: CDN + "hf_20261010_141122_025280dc-2487-4b84-aaf3-19d0abd4cfc4.png",
   brasa: CDN + "hf_20261010_132901_5bf2ace7-76eb-4d72-aa9c-88225d0b73a7.png",
-  chope: CDN + "hf_20261010_132920_4641b441-edb8-47c4-bfaf-bbd1943d5811.png",
-  drinks: CDN + "hf_20261010_132937_5408e154-0359-45fb-b7dc-45cc580d7092.png",
-  ambiente: CDN + "hf_20261010_132937_e8f47ea6-9ebf-4f6c-a38f-327a5356babd.png",
-  porcoes: CDN + "hf_20261010_132901_c03adcc1-3440-447b-85a7-b86f6dec7ea4.png",
   balcao: CDN + "hf_20261010_132901_b63879fd-46a8-4c8d-925a-fd61951420f1.png",
+  camarao: DM + "camar-ao-esperanca.jpg",
+  picanhaReal: DM + "picanha-a-esperanca.jpg",
+  coxinha: DM + "coxinha-arretada.jpg",
+  caipirao: DM + "caipir-ao.jpg",
+  mariaBonita: DM + "maria-bonita.jpg",
+  lampiao: DM + "lampi-ao.jpg",
+  banner: DM + "banner.webp",
 };
-
-// Vídeo da abertura (gerado a partir da foto da picanha). O pôster é a própria foto.
+// Vídeo da abertura (gerado a partir da foto da picanha, dentro do restaurante).
 const VIDEO = {
   hero: CDN + "hf_20261010_140004_96b9ca75-87b9-4468-ba30-70b8c59780fa.mp4",
 };
 
+// Ordem das páginas: o primeiro é a página inicial.
+const PAGES = ["index", "cardapio", "a-casa", "contato"];
+const ROUTE = { index: "inicio", cardapio: "cardapio", "a-casa": "a-casa", contato: "contato" };
+
 const read = (p) => readFileSync(join(src, p), "utf8");
-const dataUri = (p, type) => `data:${type};base64,${readFileSync(join(src, p)).toString("base64")}`;
-const LOGO = dataUri("assets/img/logo.png", "image/png");
-const FAVICON = dataUri("assets/img/favicon.png", "image/png");
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const dataUri = (p, type) => `data:${type};base64,${readFileSync(join(src, p)).toString("base64")}`;
 
 // ---------- Cardápio ----------
 function renderMenu() {
   const data = JSON.parse(read("data/cardapio.json"));
   const nav = data.categorias
     .map((c) => `<a class="cats__link" href="#${esc(c.id)}">${esc(c.nome)}</a>`)
-    .join("\n    ");
+    .join("\n      ");
   const groups = data.categorias
     .map((c) => {
       const items = c.itens
         .map((it) => {
-          const price = it.preco
-            ? `<span class="menu-item__price">${esc(it.preco)}</span>`
-            : `<span class="menu-item__price menu-item__price--ask">Preço no WhatsApp</span>`;
-          const flag = it.destaque ? `<span class="menu-item__flag">Carro-chefe</span>` : "";
-          return `<li class="menu-item reveal">
-          <h3>${flag}${esc(it.nome)}</h3>
-          ${price}
-          ${it.descricao ? `<p>${esc(it.descricao)}</p>` : ""}
+          const variants = (it.variacoes || [])
+            .map((v) => `<li><span>${esc(v.nome)}</span><span>${esc(v.preco)}</span></li>`)
+            .join("");
+          const search = esc(`${it.nome} ${it.descricao || ""} ${c.nome}`.toLowerCase());
+          return `<li class="dish" data-search="${search}">
+          ${it.foto ? `<img class="dish__img" src="${esc(it.foto)}" alt="" loading="lazy" decoding="async" width="88" height="88">` : ""}
+          <div class="dish__body">
+            <div class="dish__top">
+              <h3>${esc(it.nome)}</h3>
+              ${it.preco ? `<span class="dish__price">${esc(it.preco)}</span>` : ""}
+            </div>
+            ${it.descricao ? `<p>${esc(it.descricao)}</p>` : ""}
+            ${variants ? `<ul class="dish__variants">${variants}</ul>` : ""}
+          </div>
         </li>`;
         })
         .join("\n        ");
-      const img = IMG[c.imagem] || c.imagem;
-      return `<section class="menu-group" id="${esc(c.id)}" aria-labelledby="${esc(c.id)}-titulo">
-    <div class="menu-group__aside reveal">
-      <h2 id="${esc(c.id)}-titulo">${esc(c.nome)}</h2>
-      ${c.texto ? `<p>${esc(c.texto)}</p>` : ""}
-    </div>
-    <div class="menu-group__main">
-      ${img ? `<figure class="menu-group__img reveal"><img src="${esc(img)}" loading="lazy" decoding="async" alt="${esc(c.nome)}"></figure>` : ""}
-      <ul class="menu-items">
+      return `<section class="menu-cat" id="${esc(c.id)}" aria-labelledby="${esc(c.id)}-titulo">
+      <header class="menu-cat__head">
+        <h2 id="${esc(c.id)}-titulo">${esc(c.nome)}</h2>
+        ${c.texto ? `<p>${esc(c.texto)}</p>` : ""}
+      </header>
+      <ul class="dishes">
         ${items}
       </ul>
-    </div>
-  </section>`;
+    </section>`;
     })
-    .join("\n  ");
-  return { nav, groups };
+    .join("\n    ");
+  const total = data.categorias.reduce((n, c) => n + c.itens.length, 0);
+  return { nav, groups, total };
 }
 
 // ---------- Recursos embutidos ----------
-function inlineCss() {
-  let css = read("assets/css/style.css");
-  css = css.replace(/url\("\.\.\/fonts\/([^"]+)"\)/g, (_, f) => {
-    const b64 = readFileSync(join(src, "assets/fonts", f)).toString("base64");
-    return `url("data:font/woff2;base64,${b64}")`;
-  });
-  return `<style>\n${css}\n</style>`;
-}
-const css = inlineCss();
-const js = `<script>\n${read("assets/js/main.js")}\n</script>`;
+const css = read("assets/css/style.css").replace(/url\("\.\.\/fonts\/([^"]+)"\)/g, (_, f) => {
+  const b64 = readFileSync(join(src, "assets/fonts", f)).toString("base64");
+  return `url("data:font/woff2;base64,${b64}")`;
+});
+const js = read("assets/js/main.js");
+const LOGO = dataUri("assets/img/logo.png", "image/png");
+const FAVICON = dataUri("assets/img/favicon.png", "image/png");
 
-// ---------- Páginas ----------
+// Links entre páginas viram âncoras internas.
+const relink = (html) =>
+  html
+    .replace(/href="index\.html"/g, 'href="#inicio"')
+    .replace(/href="cardapio\.html#([\w-]+)"/g, 'href="#$1"')
+    .replace(/href="(cardapio|a-casa|contato)\.html"/g, 'href="#$1"');
+
+// ---------- Montagem ----------
 const layout = read("layout.html");
-const partials = Object.fromEntries(
-  readdirSync(join(src, "partials")).map((f) => [f.replace(/\.\w+$/, ""), read("partials/" + f)])
-);
+const partial = (n) => read(`partials/${n}.${n === "sprite" ? "svg" : "html"}`);
 const menu = renderMenu();
+
+let routes = "";
+let home = null;
+for (const page of PAGES) {
+  const raw = read(`pages/${page}.html`);
+  const m = raw.match(/^<!--meta (\{.*?\}) -->\n/s);
+  if (!m) throw new Error(`Faltou o bloco <!--meta {...} --> em ${page}.html`);
+  const meta = JSON.parse(m[1]);
+  if (page === "index") home = meta;
+  const id = ROUTE[page];
+  const active = page === "index" ? " is-active" : "";
+  routes += `\n<div class="route${active}" id="${id}" data-route data-title="${esc(meta.title)}" tabindex="-1">\n${raw.slice(m[0].length)}\n</div>\n`;
+}
+
+const vars = {
+  title: esc(home.title),
+  description: esc(home.description),
+  site: SITE,
+  wa: WA,
+  menu: menu.groups,
+  menu_nav: menu.nav,
+  menu_total: String(menu.total),
+  logo: LOGO,
+  favicon: FAVICON,
+};
+
+let html = layout
+  .replace(/\{\{> (\w+)\}\}/g, (_, n) => partial(n))
+  .replace("{{content}}", () => routes);
+html = relink(html)
+  .replace(/\{\{video\.(\w+)\}\}/g, (_, k) => {
+    if (!(k in VIDEO)) throw new Error(`Vídeo desconhecido: ${k}`);
+    return VIDEO[k];
+  })
+  .replace(/\{\{img\.(\w+)\}\}/g, (_, k) => {
+    if (!(k in IMG)) throw new Error(`Imagem desconhecida: ${k}`);
+    return IMG[k];
+  })
+  .replace(/\{\{(\w+)\}\}/g, (_, k) => {
+    if (!(k in vars)) throw new Error(`Variável desconhecida: {{${k}}}`);
+    return vars[k];
+  })
+  .replace("<!--STYLES-->", () => `<style>\n${css}\n</style>`)
+  .replace("<!--SCRIPTS-->", () => `<script>\nvar WA_NUMBER = "${WA_NUMBER}";\n${js}\n</script>`);
+
+// Checagens: ids únicos e nenhuma âncora sem destino.
+const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((x) => x[1]);
+const dup = ids.filter((x, i) => ids.indexOf(x) !== i);
+if (dup.length) throw new Error("ids repetidos: " + [...new Set(dup)].join(", "));
+const anchors = [...html.matchAll(/href="#([^"]+)"/g)].map((x) => x[1]);
+const missing = anchors.filter((a) => !ids.includes(a));
+if (missing.length) throw new Error("âncoras sem destino: " + [...new Set(missing)].join(", "));
+if (/href="[\w-]+\.html/.test(html)) throw new Error("ainda há link para outra página .html");
 
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
-
-const pages = readdirSync(join(src, "pages")).filter((f) => f.endsWith(".html"));
-const sitemap = [];
-
-for (const file of pages) {
-  const raw = read("pages/" + file);
-  const m = raw.match(/^<!--meta (\{.*?\}) -->\n/s);
-  if (!m) throw new Error(`Faltou o bloco <!--meta {...} --> em ${file}`);
-  const meta = JSON.parse(m[1]);
-  const content = raw.slice(m[0].length);
-
-  let html = layout.replace(/\{\{> (\w+)\}\}/g, (_, n) => {
-    if (!(n in partials)) throw new Error(`Parte não encontrada: ${n}`);
-    return partials[n];
-  });
-  html = html.replace("{{content}}", () => content);
-
-  const vars = {
-    title: esc(meta.title),
-    description: esc(meta.description),
-    path: meta.path,
-    nav: meta.nav,
-    site: SITE,
-    wa: WA,
-    menu: menu.groups,
-    menu_nav: menu.nav,
-    logo: LOGO,
-    favicon: FAVICON,
-  };
-  html = html
-    .replace(/\{\{video\.(\w+)\}\}/g, (_, k) => {
-      if (!(k in VIDEO)) throw new Error(`Vídeo desconhecido: ${k} em ${file}`);
-      return VIDEO[k];
-    })
-    .replace(/\{\{img\.(\w+)\}\}/g, (_, k) => {
-      if (!(k in IMG)) throw new Error(`Imagem desconhecida: ${k} em ${file}`);
-      return IMG[k];
-    })
-    .replace(/\{\{(\w+)\}\}/g, (_, k) => {
-      if (!(k in vars)) throw new Error(`Variável desconhecida: {{${k}}} em ${file}`);
-      return vars[k];
-    });
-
-  if (meta.nav) {
-    html = html.replaceAll(`data-nav="${meta.nav}"`, `data-nav="${meta.nav}" aria-current="page"`);
-  }
-  html = html.replace("<!--STYLES-->", () => css).replace("<!--SCRIPTS-->", () => js);
-
-  writeFileSync(join(out, file), html);
-  if (file !== "404.html") sitemap.push(`${SITE}/${meta.path}`);
-  console.log("ok", file);
-}
-
+writeFileSync(join(out, "index.html"), html);
 writeFileSync(
   join(out, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap
-    .map((u) => `  <url><loc>${u}</loc></url>`)
-    .join("\n")}\n</urlset>\n`
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${SITE}/</loc></url>\n</urlset>\n`
 );
 writeFileSync(join(out, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
-console.log(`Pronto: ${pages.length} páginas em dist/`);
+console.log(`Pronto: dist/index.html (${(html.length / 1024).toFixed(0)} KB, ${menu.total} itens no cardápio)`);
